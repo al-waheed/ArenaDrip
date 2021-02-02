@@ -24,7 +24,7 @@ class Payment extends Component {
 				<h2 className='heading'>Make your payment with <span>stripe</span></h2>
 				<StripeCheckout 
 				 stripeKey="pk_test_51IG4hAB84gCmikSTmQdGGWuJEesi7JzVUhiYOFELqO3HEo5N10vkcaMoiBrkSJc4kWkz3rb3ouwPkt7hDseRLiVS00rBDNug8o"
-				 name="Payment for purchased items"
+				 name="PAYMENT OF ITEMS"
 				 amount={total}
 				 token={this.thanks}
 				 />
