@@ -1,8 +1,8 @@
 import React from "react";
 import { DataProvider } from "./DataContext";
 import { BrowserRouter as Router } from "react-router-dom";
-import Header from "./Header";
-import Section from "./Section";
+import Navbar from "./Navbar";
+import Components from "./Components";
 import Footer from "./Footer";
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
     <DataProvider>
       <div className="App">
         <Router>
-          <Header />
-          <Section />
+          <Navbar />
+          <Components />
           <Footer />
         </Router>
       </div>

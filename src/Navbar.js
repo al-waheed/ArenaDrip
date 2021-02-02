@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "./DataContext";
-import "./Header.css";
+import "./Navbar.css";
 
-class Header extends Component {
+class Navbar extends Component {
   static contextType = DataContext;
 
   render() {
@@ -40,4 +40,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default Navbar;

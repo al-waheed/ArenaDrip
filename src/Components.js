@@ -4,7 +4,7 @@ import Product from "./Product";
 import Cart from "./Cart";
 import Payment from './Payment';
 
-export class Section extends Component {
+export class Components extends Component {
   render() {
     return (
       <div>
@@ -19,4 +19,4 @@ export class Section extends Component {
   }
 }
 
-export default Section;
+export default Components;

@@ -87,68 +87,62 @@ html {
 
 /* cart styling */
 
+.cartContainer{
+  margin: 0 17rem;
+}
+
 .cartContainer .cartHeading {
   text-transform: uppercase;
   text-align: center;
-  font-weight: lighter;
+  font-weight: bold;
 }
 
 .cartContainer .carts {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.cartEmpty {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: fantasy;
+  border-bottom: 2px solid rgb(156, 153, 153);
+  padding-bottom: 3rem;
 }
 
 .total{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 1px 4px rgba(32, 32, 32, 0.3);
-  padding: 0 1rem;
-  margin: 1rem 15rem 0 15rem ;
 }
 
 .total h3{
   color: red;
   font-weight: 600;
-  font-family: fantasy;
 }
 
 .total h3 span{
-  color: black;
+  color: rgb(78, 76, 76);
   font-weight: 900;
   font-family: serif;
   font-size: 24px;
 }
 
-.paymentBtn {
+.total .paymentBtn {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   font-family: monospace;
   background-color: rgb(7, 153, 7);
   color: #ffffff;
-  font-size: 20px;
+  font-size: 22px;
   padding: 10px 18px;
   transition: all 0.5s;
   cursor: pointer;
 }
 
-.paymentBtn span {
+.total .paymentBtn span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.paymentBtn span:after {
+.total .paymentBtn span:after {
   content: "\00bb";
   position: absolute;
   opacity: 0;
@@ -157,103 +151,127 @@ html {
   transition: 0.5s;
 }
 
-.paymentBtn:hover span {
+.total .paymentBtn:hover span {
   padding-right: 25px;
 }
 
-.paymentBtn:hover span:after {
+.total .paymentBtn:hover span:after {
   opacity: 1;
   right: 0;
 }
 
-.paymentBtn:hover {
+.total .paymentBtn:hover {
   background-color: rgb(3, 119, 3);
 }
 
-.cartList {
-  box-shadow: 0 1px 4px rgba(32, 32, 32, 0.3);
-  width: 32rem;
-  margin-bottom: 30px;
+.cartList{
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 17px 0;
+  justify-content: space-between;
+  margin: 13px 0;
 }
 
-.cartList .cartInfo{
+.cartImg{
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.cartList .cartPics {
-  width: 10rem;
-  height: 10rem;
+.cartImg .pics {
+  width: 9rem;
+  height: 9rem;
   border-radius: 50%;
   margin-right: 6rem;
 }
 
-.cartList .cartProduct {
+.cartInfo .cartProduct {
   text-transform: uppercase;
   font-family: monospace;
-  margin-bottom: 10px;
   font-size: 22px;
-  color: rgb(49, 49, 49);
+  color: rgb(34, 33, 33);
+  margin-bottom: 0.9rem;
 }
 
-.cartList .cartPrice {
-  color: red;
-  margin-bottom: 10px;
+.cartInfo .cartPrice {
+  color: green;
   font-size: 18px;
   font-family: monospace;
 }
 
-.cartList .decount{
-  padding: 5px 15px;
+.cartInfo .cartPrice span{
   font-size: 20px;
-  font-weight: 700;
-  border: none;
-  text-align: center;
-  display: inline-block;
-  background-color: rgb(247, 247, 4);
-  color: black;
-  outline: none;
-  cursor: pointer;
+  font-weight: bold;
 }
 
-.cartList .incount{
-  padding: 5px 13px;
-  font-size: 20px;
-  font-weight: 700;
-  border: none;
-  text-align: center;
+.cartInfo .deletBtn{
   display: inline-block;
-  background-color: green;
-  color: black;
-  outline: none;
-  cursor: pointer;
-}
-
-.cartList .decount:hover,
-.cartList .incount:hover{
-  color: rgb(255, 255, 255);
-}
-
-.cartList .delbtn{
-  margin-top: 15px;
-  display: inline-block;
-  background-color: rgb(228, 47, 47);
   text-transform: uppercase;
   border: none;
-  color: #ffffff;
+  color: tomato;
   font-size: 16px;
-  padding: 12px 22px;
   cursor: pointer;
   outline: none;
+  background-color: transparent;
+  margin-top: 1.8rem;
+  margin-left: -6px;
+  transition: all 0.2s;
 }
 
-.cartList .delbtn:hover{
-  background-color: rgb(209, 6, 6);
-  color: #ffffff;
+.cartInfo .deletBtn:hover{
+  color: #e72424;
+  text-shadow: 1px 1px 2px rgb(247, 116, 93);
+}
+
+.countButtons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countButtons span{
+  color: green;
+  font-weight: 600;
+}
+
+.countButtons .decrease{
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  background-color: transparent;
+  color: tomato;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.countButtons .increase{
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: .7rem;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  background-color: transparent;
+  color: tomato;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.countButtons .decrease:hover,
+.countButtons .increase:hover{
+  color: #e72424;
+  text-shadow: 1px 1px 2px rgb(247, 116, 93);
+}
+
+.cartEmpty {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: fantasy;
+  color: #e72424;
 }
 
 /* cart styling end*/
@@ -265,9 +283,8 @@ html {
   align-items: center;
   justify-content: center;
   border: 1px solid rgb(226, 223, 223);
-  color: black;
+  color: tomato;
   height: 4rem;
-  text-shadow: 2px 2px 5px #222222;
   margin-top: 2rem;
 }
 
@@ -284,3 +301,22 @@ html {
 }
 
 /* footer styling end */
+
+/* payment styling */
+
+.stripePayment{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stripePayment .heading{
+  text-transform: uppercase;
+  font-weight: light;
+}
+
+.stripePayment .heading span{
+  color: rgba(0, 0, 255, 0.562);
+}
+
+/* payment styling end */
