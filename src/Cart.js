@@ -11,7 +11,7 @@ componentDidMount(){
 }
 
   render() {
-    const { cart, increase, decrease, deleteCart, total } = this.context;
+    const { cart, increase, decrease, deleteCart, total, clearCart } = this.context;
       const cartList = cart.length ? (cart.map((item) => {
         return (
           <div key={item._id} className="cartList">
@@ -38,14 +38,18 @@ componentDidMount(){
     );
     return (
       <div className="cartContainer">
-         <h1 className='cartHeading'>Your cart</h1>
+          <h1 className='cartHeading'>Your cart</h1>
           <div className="carts">{cartList}</div>
-          <div className='total'>
-          <Link className='paymentBtn' to="/payment"><span>Make Payment</span></Link>
-          <h3><span>Total: </span> ${total}.00</h3>
+        <div className='total'>
+           <Link to="/payment" className="paymentBtn"> <span>Make Payment</span> </Link>
+           <h3><span>Total: </span>${total}.00</h3>
+        </div>
+        <div className="btnBox">
+          <button className="clearBtn" onClick={() => clearCart()}>clearcart</button>
         </div>
       </div>
     );
+    
   }
 }
 

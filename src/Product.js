@@ -8,6 +8,7 @@ class Product extends Component {
     const { products, addCart, cartId } = this.context;
      const productList = products.map((product) => {
       const isAdded = cartId.includes(product._id);
+      
       return (
         <div key={product._id} className="itemList">
           <div className="itemBox">

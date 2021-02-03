@@ -104,6 +104,32 @@ html {
   padding-bottom: 3rem;
 }
 
+.cartContainer .btnBox{
+  margin-top: 2rem ;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.cartContainer .btnBox .clearBtn{
+  padding: 8px 16px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: transparent;
+  outline: none;
+  font-family: monospace;
+  display: inline-block;
+  color: rgb(19, 18, 18);
+  border: 2px solid tomato;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btnBox .clearBtn:hover{
+ background-color: tomato;
+}
+
 .total{
   display: flex;
   align-items: center;
@@ -116,7 +142,7 @@ html {
 }
 
 .total h3 span{
-  color: rgb(78, 76, 76);
+  color: rgb(19, 18, 18);
   font-weight: 900;
   font-family: serif;
   font-size: 24px;
@@ -128,8 +154,8 @@ html {
   text-transform: uppercase;
   font-family: monospace;
   background-color: rgb(7, 153, 7);
-  color: #ffffff;
-  font-size: 22px;
+  color: rgb(19, 18, 18);
+  font-size: 20px;
   padding: 10px 18px;
   transition: all 0.5s;
   cursor: pointer;

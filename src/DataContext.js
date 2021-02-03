@@ -99,7 +99,7 @@ export class DataProvider extends Component {
         item.count === 1 ? (item.count = 1) : (item.count -= 1);
       }
     });
-    this.setState({ cart });
+    this.setState({ cart:cart });
     this.getTotalPrice();
   };
 
@@ -122,6 +122,12 @@ export class DataProvider extends Component {
     this.setState({ total: totalPrice });
   };
 
+  clearCart = () => {
+    const { cart } = this.state;
+    const clear = cart.length ? ([]) : (cart);
+    this.setState({ cart: clear })
+  }
+  
   componentDidUpdate(){
     localStorage.setItem("dataCart", JSON.stringify(this.state.cart));
     localStorage.setItem("dataTotal", JSON.stringify(this.state.total));
@@ -140,10 +146,10 @@ export class DataProvider extends Component {
 
   render() {
     const { products, cart, total } = this.state;
-    const cartId = cart.map((item) => { return item._id; });
-    const { addCart, increase, decrease, deleteCart, getTotalPrice } = this;
+    const cartId = cart.map(item => { return item._id; });
+    const { addCart, increase, decrease, deleteCart, getTotalPrice, clearCart } = this;
     return (
-      <DataContext.Provider value={{ products, cartId, cart, total, addCart, increase, decrease, deleteCart, getTotalPrice }}>
+      <DataContext.Provider value={{ products, cartId, cart, total, clearCart, addCart, increase, decrease, deleteCart, getTotalPrice }}>
         {this.props.children}
       </DataContext.Provider>
     );
