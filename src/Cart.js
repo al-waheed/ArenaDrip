@@ -21,7 +21,7 @@ componentDidMount(){
                 </div>
                 <div className="cartInfo">
                 <div className="cartProduct">{item.product}</div>
-                <div className="cartPrice"><span>$</span>{item.price}.00</div>
+                <div className="cartPrice"><span>N</span>{item.price}.00</div>
                 <div><button className='deletBtn' onClick={()=>{deleteCart(item._id)}}>Remove</button></div>
                 </div>
               </div>
@@ -41,11 +41,11 @@ componentDidMount(){
           <h1 className='cartHeading'>Your cart</h1>
           <div className="carts">{cartList}</div>
         <div className='total'>
-           <Link to="/payment" className="paymentBtn"> <span>Make Payment</span> </Link>
-           <h3><span>Total: </span>${total}.00</h3>
+           <Link to="/payment" className="paymentBtn"> <span>Check out</span> </Link>
+           <h3><span>Total: </span><i>NGN</i>{total}.00</h3>
         </div>
         <div className="btnBox">
-          <button className="clearBtn" onClick={() => clearCart()}>clearcart</button>
+          <button className="clearBtn" onClick={() => clearCart()}>clear cart</button>
         </div>
       </div>
     );

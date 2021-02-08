@@ -10,63 +10,63 @@ export class DataProvider extends Component {
         count: 1,
         product: "Bell Pepper",
         image: "./image/bell pepper.jpg",
-        price: 25,
+        price: 750,
       },
       {
         _id: 12,
         count: 1,
         product: "Chilli Pepper",
         image: "./image/chilli pepper.jpg",
-        price: 55,
+        price: 655,
       },
       {
         _id: 13,
         count: 1,
         product: "Dry Pepper",
         image: "./image/dry pepper.jpg",
-        price: 25,
+        price: 400,
       },
       {
         _id: 14,
         count: 1,
         product: "Green Pepper",
         image: "./image/green pepper.jpg",
-        price: 45,
+        price: 750,
       },
       {
         _id: 15,
         count: 1,
         product: "Onions",
         image: "./image/onions.jpg",
-        price: 55,
+        price: 1000,
       },
       {
         _id: 16,
         count: 1,
         product: "irish potato",
         image: "./image/irish potato.jpg",
-        price: 50,
+        price: 800,
       },
       {
         _id: 17,
         count: 1,
         product: "Red Pepper",
         image: "./image/red pepper.jpg",
-        price: 95,
+        price: 620,
       },
       {
         _id: 18,
         count: 1,
         product: "tomato",
         image: "./image/tomato.jpg",
-        price: 65,
+        price: 1515,
       },
       {
         _id: 19,
         count: 1,
         product: "yellow bellpepper",
         image: "./image/yellow bellpepper.jpg",
-        price: 25,
+        price: 1230,
       },
     ],
     cart: [],
@@ -93,7 +93,7 @@ export class DataProvider extends Component {
   };
 
   decrease = id => {
-    const { cart } = this.state;
+   const { cart } = this.state;
    cart.forEach((item) => {
       if (item._id === id) {
         item.count === 1 ? (item.count = 1) : (item.count -= 1);
@@ -124,11 +124,12 @@ export class DataProvider extends Component {
 
   clearCart = () => {
     const { cart } = this.state;
-    const clear = cart.length ? ([]) : (cart);
-    this.setState({ cart: clear })
+    const clearData = cart.length ? ([]) : (cart);
+    this.setState({ cart: clearData });
+    this.getTotalPrice();
   }
-  
-  componentDidUpdate(){
+
+   componentDidUpdate(){
     localStorage.setItem("dataCart", JSON.stringify(this.state.cart));
     localStorage.setItem("dataTotal", JSON.stringify(this.state.total));
   };

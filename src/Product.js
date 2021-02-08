@@ -14,7 +14,7 @@ class Product extends Component {
           <div className="itemBox">
             <img src={product.image} alt="pics" className="itemPic" />
              <div className="itemName">{product.product}</div>
-             <div className="itemPrice"> ${product.price}.00</div>
+             <div className="itemPrice"><b>NGN</b>{product.price}.00</div>
              <button onClick={() => {addCart(product._id)}}
               className={`${isAdded ? "itemBtnGray" : "itemBtn"}`}
               disabled={isAdded}>

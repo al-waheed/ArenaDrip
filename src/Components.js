@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import Product from "./Product";
 import Cart from "./Cart";
-import Payment from './Payment';
+import Payment from "./Payment";
 
-export class Components extends Component {
+class Components extends Component {
   render() {
     return (
       <div>
