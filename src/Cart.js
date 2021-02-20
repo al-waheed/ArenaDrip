@@ -41,7 +41,7 @@ componentDidMount(){
           <h1 className='cartHeading'>Your cart</h1>
           <div className="carts">{cartList}</div>
         <div className='total'>
-           <Link to="/payment" className="paymentBtn"> <span>Check out</span> </Link>
+           <Link to="/payment" className="paymentBtn"> <span>Payment Check out</span> </Link>
            <h3><span>Total: </span><i>NGN</i>{total}.00</h3>
         </div>
         <div className="btnBox">
