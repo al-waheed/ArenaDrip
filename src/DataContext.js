@@ -95,8 +95,8 @@ export class DataProvider extends Component {
   decrease = id => {
    const { cart } = this.state;
    cart.forEach((item) => {
-      if (item._id === id) {
-        item.count === 1 ? (item.count = 1) : (item.count -= 1);
+        if (item._id === id) {
+        item.count === 1 ? this.deleteCart(id) : (item.count -= 1);
       }
     });
     this.setState({ cart:cart });
@@ -123,10 +123,9 @@ export class DataProvider extends Component {
   };
 
   clearCart = () => {
-    const { cart } = this.state;
-    const clearData = cart.length ? ([]) : (cart);
-    this.setState({ cart: clearData });
-    this.getTotalPrice();
+    this.setState({ cart: [], total: 0 });
+    localStorage.setItem("dataCart", JSON.stringify([]));
+    localStorage.setItem("dataTotal", JSON.stringify(0));
   }
 
    componentDidUpdate(){

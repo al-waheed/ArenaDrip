@@ -30,7 +30,7 @@ class Navbar extends Component {
             <ul>
               <li>
                 <Link className="navLink" to="/cart"> Cart </Link>
-                  <span>{cart.length}</span>
+                {cart.length > 0 && <span>{cart.length}</span>}
               </li>
             </ul>
           </nav>
