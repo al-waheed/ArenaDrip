@@ -19,7 +19,7 @@ class Navbar extends Component {
           <nav className="navbar">
             <ul>
               <li>
-                <Link className="navLink" to="/product"> Product </Link>
+                <Link className="navLink" to="/"> Product </Link>
               </li>
               <li>
                 <Link className="navLink" to="/cart"> Cart </Link>

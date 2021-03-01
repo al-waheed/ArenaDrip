@@ -10,7 +10,6 @@ class Components extends Component {
       <div>
         <Switch>
           <Route path="/" exact component={Product} />
-          <Route path="/product" component={Product} />
           <Route path="/cart" component={Cart} />
           <Route path="/payment" component={Payment} />
         </Switch>
