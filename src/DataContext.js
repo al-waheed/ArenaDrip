@@ -1,82 +1,17 @@
 import React, { Component, createContext } from "react";
+import { storeProduct } from './Data';
 
 export const DataContext = createContext();
 
 export class DataProvider extends Component {
   state = {
-    products: [
-      {
-        _id: 11,
-        count: 1,
-        product: "Bell Pepper",
-        image: "./image/bell pepper.jpg",
-        price: 750,
-      },
-      {
-        _id: 12,
-        count: 1,
-        product: "Chilli Pepper",
-        image: "./image/chilli pepper.jpg",
-        price: 655,
-      },
-      {
-        _id: 13,
-        count: 1,
-        product: "Dry Pepper",
-        image: "./image/dry pepper.jpg",
-        price: 400,
-      },
-      {
-        _id: 14,
-        count: 1,
-        product: "Green Pepper",
-        image: "./image/green pepper.jpg",
-        price: 750,
-      },
-      {
-        _id: 15,
-        count: 1,
-        product: "Onions",
-        image: "./image/onions.jpg",
-        price: 1000,
-      },
-      {
-        _id: 16,
-        count: 1,
-        product: "irish potato",
-        image: "./image/irish potato.jpg",
-        price: 800,
-      },
-      {
-        _id: 17,
-        count: 1,
-        product: "Red Pepper",
-        image: "./image/red pepper.jpg",
-        price: 620,
-      },
-      {
-        _id: 18,
-        count: 1,
-        product: "tomato",
-        image: "./image/tomato.jpg",
-        price: 1515,
-      },
-      {
-        _id: 19,
-        count: 1,
-        product: "yellow bellpepper",
-        image: "./image/yellow bellpepper.jpg",
-        price: 1230,
-      },
-    ],
+    products: storeProduct,
     cart: [],
     total: 0,
   };
 
   addCart = id => {
     const { products, cart } = this.state;
-    // const cartId = cart.map(item => { return item._id; });
-    // console.log(cartId)
     const data = products.filter((product) => {
       return product._id === id;
     });
@@ -95,9 +30,9 @@ export class DataProvider extends Component {
   };
 
   decrease = id => {
-   const { cart } = this.state;
-   cart.forEach((item) => {
-        if (item._id === id) {
+    const { cart } = this.state;
+    cart.forEach((item) => {
+      if (item._id === id) {
         item.count === 1 ? (this.deleteCart(id)) : (item.count -= 1);
       }
     });
@@ -118,8 +53,8 @@ export class DataProvider extends Component {
 
   getTotalPrice = () => {
     const { cart } = this.state;
-    const totalPrice = cart.reduce((prev, item) => {
-      return prev + (item.price * item.count);
+    const totalPrice = cart.reduce((prevItem, item) => {
+      return prevItem + (item.price * item.count);
     }, 0);
     this.setState({ total: totalPrice });
   };
@@ -130,12 +65,12 @@ export class DataProvider extends Component {
     localStorage.setItem("dataTotal", JSON.stringify(0));
   }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     localStorage.setItem("dataCart", JSON.stringify(this.state.cart));
     localStorage.setItem("dataTotal", JSON.stringify(this.state.total));
   };
 
-  componentDidMount(){
+  componentDidMount() {
     const dataCart = JSON.parse(localStorage.getItem("dataCart"));
     if (dataCart !== null) {
       this.setState({ cart: dataCart });
