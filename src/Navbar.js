@@ -19,15 +19,8 @@ class Navbar extends Component {
           <nav className="navbar">
             <ul>
               <li>
-                <Link className="navLink" to="/"> Home </Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
                 <Link className="navLink" to="/product"> Product </Link>
               </li>
-            </ul>
-            <ul>
               <li>
                 <Link className="navLink" to="/cart"> Cart </Link>
                 {cart.length > 0 && <span>{cart.length}</span>}

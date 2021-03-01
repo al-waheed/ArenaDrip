@@ -6,13 +6,12 @@ import { ToastsContainer, ToastsStore, ToastsContainerPosition } from "react-toa
 class Payment extends Component {
 
    constructor(prop){
-	   super(prop);
-        this.thanks = this.thanks.bind(this);
+	   super(prop); 
+        this.thanks = this.thanks.bind(this);    
    }
 
    thanks(token){
 	 console.log(token)
-	//  window.location.reload()
 	 return ToastsStore.success("Your payment was successful")
    }
 
