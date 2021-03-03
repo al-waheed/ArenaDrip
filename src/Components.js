@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import Product from "./Product";
 import Cart from "./Cart";
-import Payment from "./Payment";
+import Checkout from "./Checkout";
 
 class Components extends Component {
   render() {
@@ -11,7 +11,7 @@ class Components extends Component {
         <Switch>
           <Route path="/" exact component={Product} />
           <Route path="/cart" component={Cart} />
-          <Route path="/payment" component={Payment} />
+          <Route path="/checkout" component={Checkout} />
         </Switch>
       </div>
     );

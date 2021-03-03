@@ -40,15 +40,15 @@ class Cart extends Component {
       <div className="cartContainer">
         <h1 className='cartHeading'>Your cart</h1>
         <div className="carts">{cartList}</div>
-        { cart.length > 0 && (<div>
+        { cart.length > 0 && <div>
           <div className='total'>
-            <Link to="/payment" className="paymentBtn"> <span>Checkout payment</span> </Link>
+            <Link to="/checkout" className="paymentBtn"> <span>Checkout payment</span> </Link>
             <h3><span>Total: </span><i>NGN</i>{total}.00</h3>
           </div>
           <div className="btnBox">
             <button className="clearBtn" onClick={() => clearCart()}>clear cart</button>
           </div>
-        </div>)}
+        </div>}
       </div>
     );
 

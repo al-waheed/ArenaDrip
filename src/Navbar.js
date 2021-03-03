@@ -13,7 +13,7 @@ class Navbar extends Component {
         <div className="menu">
           <div className="heading">
             <h1>
-              <Link className="headingTitle" to="/"> Òjà </Link>
+              <Link className="headingTitle" to="/"> Arena </Link>
             </h1>
           </div>
           <nav className="navbar">

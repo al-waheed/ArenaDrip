@@ -208,27 +208,29 @@ html {
   width: 9rem;
   height: 9rem;
   border-radius: 50%;
+  border: 1.5px solid tomato;
+  padding: 3px;
   margin-right: 6rem;
 }
 
 .cartInfo .cartProduct {
   text-transform: uppercase;
   font-family: monospace;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 2px;
   color: rgb(71, 70, 70);
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .cartInfo .cartPrice {
   font-family: monospace;
   color: green;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 2px;
 }
 
 .cartInfo .cartPrice span{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -259,6 +261,7 @@ html {
 
 .countButtons span{
   font-weight: bold;
+  font-size: 15px;
   color: green;
 }
 
