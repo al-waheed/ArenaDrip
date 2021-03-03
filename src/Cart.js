@@ -26,9 +26,9 @@ class Cart extends Component {
             </div>
           </div>
           <div className='countButtons'>
-            <div><button className='decrease' onClick={() => { decrease(item._id) }}> - </button></div>
-            <span> {item.count} </span>
             <div><button className='increase' onClick={() => { increase(item._id) }}> + </button></div>
+            <span> {item.count} </span>
+            <div><button className='decrease' onClick={() => { decrease(item._id) }}> - </button></div>
           </div>
         </div>
       );
