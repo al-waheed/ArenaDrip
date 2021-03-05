@@ -12,7 +12,7 @@ class Product extends Component {
           <div className="itemBox">
             <img src={product.image} alt="pics" className="itemPic" />
              <div className="itemName">{product.product}</div>
-             <div className="itemPrice"><b>NGN</b>{product.price}.00</div>
+             <div className="itemPrice"><b>NGN</b>{product.price}</div>
              <button className="itemBtn" onClick={() => {addCart(product._id)}}>
               Add to cart
             </button>

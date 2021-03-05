@@ -13,6 +13,7 @@ class Cart extends Component {
   render() {
     const { cart, increase, decrease, deleteCart, total, clearCart } = this.context;
     const cartList = cart.length ? (cart.map((item) => {
+    // console.log(isEqual)
       return (
         <div key={item._id} className="cartList">
           <div className="cartImg">
@@ -28,7 +29,7 @@ class Cart extends Component {
           <div className='countButtons'>
             <div><button className='increase' onClick={() => { increase(item._id) }}> + </button></div>
             <span> {item.count} </span>
-            <div><button className='decrease' onClick={() => { decrease(item._id) }}> - </button></div>
+            <div><button className='increase' onClick={() => { decrease(item._id) }}> - </button></div>
           </div>
         </div>
       );

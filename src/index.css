@@ -89,21 +89,20 @@ html {
   text-align: center;
   font-weight: bold;
   letter-spacing: 5px;
-  line-height: 4;
+  line-height: 3;
 }
 
 .cartContainer .carts {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid rgb(156, 153, 153);
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
 .cartContainer .btnBox{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4rem 0rem 4rem 0rem;
+  margin: 5rem 0rem 4rem 0rem;
 } 
 
 .cartContainer .btnBox .clearBtn{
@@ -130,6 +129,7 @@ html {
   align-items: center;
   justify-content: space-between;
   letter-spacing: 2px;
+  border-top: 2px solid rgb(156, 153, 153);
 }
 
 .total h3{
@@ -158,6 +158,7 @@ html {
   color: rgb(19, 18, 18);
   font-size: 17px;
   padding: 10px 18px;
+  margin-top: 2rem;
   cursor: pointer;
   transition: all 0.5s;
 }
@@ -214,7 +215,7 @@ html {
 }
 
 .cartInfo .cartProduct {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: monospace;
   font-size: 20px;
   letter-spacing: 2px;
@@ -236,7 +237,7 @@ html {
 
 .cartInfo .deletBtn{
   display: inline-block;
-  text-transform: uppercase;
+  text-transform:lowercase;
   color: tomato;
   background-color: transparent;
   font-size: 16px;
@@ -300,7 +301,7 @@ html {
 .cartEmpty {
   font-family: fantasy;
   text-align: center;
-  text-transform: uppercase;
+  letter-spacing: 1px;
   color: #e72424;
 }
 /* cart styling end*/

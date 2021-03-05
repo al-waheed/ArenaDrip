@@ -12,6 +12,8 @@ export class DataProvider extends Component {
 
   addCart = id => {
     const { products, cart } = this.state;
+    // const cartId = cart.map((cart) =>  cart._id)
+    // console.log(cartId)
     const data = products.filter((product) => {
       return product._id === id;
     });
