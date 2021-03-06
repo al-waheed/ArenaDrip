@@ -11,7 +11,6 @@ html {
 
 .App{
   background-color: white;
-  border: 1px solid rgb(226, 223, 223);
   width: 90%;
   margin: 2rem auto;
 }
@@ -310,26 +309,104 @@ html {
 /* footer styling */
 
 .footer{
+ color: white;
+ margin-top: 2rem;
+}
+
+.subFooter{
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: tomato;
-  border: 1px solid rgb(226, 223, 223);
-  height: 4rem;
-  margin-top: 2rem;
+  justify-content: space-between;
+  background-color:  rgb(36, 35, 35);
+  padding: 0 2.5rem;
 }
 
-.footer .footerText{
-  display: inline-block;
-  text-transform: uppercase;
-  font-family: monos;
+.subFooter .newsletter h3{
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-bottom: -7px;
 }
 
-.footer span{
-   position: relative;
-   bottom: 10px;
-   font-size: 17px;
+.subFooter .newsletter p{
+font-size: 17px;
+font-family: serif;
 }
+
+.subFooter .subscribe{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.subFooter .subscribe .input{
+ width: 30vw;
+ height: 2.5rem;
+ outline: none;
+}
+ 
+.subFooter .subscribe .input::placeholder{
+  padding: 20px ;
+}
+
+.subFooter button{
+  padding: 15px 20px;
+  background-color: tomato;
+  color:  rgb(36, 35, 35);
+  border: none;
+  outline: none;
+}
+
+.subFooter2{
+  background-color:black;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+}
+
+.subFooter2 .info{
+  font-family: 'Times New Roman';
+  font-size: 17px;
+  text-align: left;
+  letter-spacing: .8px;
+}
+
+.subFooter2 .info p{
+  width: 35vw;
+  font-weight: 100;
+}
+
+.subFooter2 .address{
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: 'Times New Roman';
+  line-height: 5px;
+}
+
+.subFooter2 .about h3{
+ font-size: 14px;
+ letter-spacing: 1px;
+ font-weight: 100;
+ line-height: 9px;
+ font-family: 'Times New Roman';
+}
+
+.legal{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 0 2.5rem;
+  border-top: 1px solid white;
+}
+
+.legal p{
+  font-family: serif;
+  font-size: 15px;
+}
+
+.legal p span{
+  color: blue;
+}
+
 /* footer styling end */
 
 
