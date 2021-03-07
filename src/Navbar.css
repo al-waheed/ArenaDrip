@@ -27,6 +27,8 @@
 
 .navbar ul {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar li {
@@ -50,7 +52,6 @@
   font-size: 16px;
   font-family: "algerian";
   font-weight: 100;
-  margin-left: 2rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-decoration: none;
@@ -58,7 +59,15 @@
   transition: all 0.3s;
 }
 
-.navbar .navLink:hover {
+.navbar .navLink2 {
+  display: inline-block;
+  font-size: 20px;
+  color: tomato;
+  margin-left: 2rem;
+}
+
+.navbar .navLink:hover,
+.navbar .navLink2:hover {
   color: rgb(196, 51, 26);
   text-shadow: 1px 1px 2px rgb(247, 116, 93);
   transition: all 0.3s;

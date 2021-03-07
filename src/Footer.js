@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookSquare, faTwitterSquare, faInstagramSquare, faYoutubeSquare} from '@fortawesome/free-brands-svg-icons'
 
 function Footer() {
   return (
@@ -40,6 +42,13 @@ function Footer() {
       </div>
       <div className='legal'>
         <p>We Using <span>Stripe</span> For Safe Payment. </p>
+        <div className='connect'>
+        <p>Connect with us</p>
+        <FontAwesomeIcon icon={faFacebookSquare} className='icon'/>
+        <FontAwesomeIcon icon={faTwitterSquare} className='icon'/>
+        <FontAwesomeIcon icon={faInstagramSquare} className='icon'/>
+        <FontAwesomeIcon icon={faYoutubeSquare} className='icon'/>
+        </div>
         <p> &copy; 2021 ArenaDrip Limited. All Rights Reserved.</p>
       </div>
     </div>

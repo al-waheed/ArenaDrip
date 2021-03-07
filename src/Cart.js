@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { DataContext } from "./DataContext";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleUp, faAngleDown, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 class Cart extends Component {
@@ -13,7 +15,6 @@ class Cart extends Component {
   render() {
     const { cart, increase, decrease, deleteCart, total, clearCart } = this.context;
     const cartList = cart.length ? (cart.map((item) => {
-    // console.log(isEqual)
       return (
         <div key={item._id} className="cartList">
           <div className="cartImg">
@@ -23,13 +24,13 @@ class Cart extends Component {
             <div className="cartInfo">
               <div className="cartProduct">{item.product}</div>
               <div className="cartPrice"><span>N</span>{item.price}.00</div>
-              <div><button className='deletBtn' onClick={() => { deleteCart(item._id) }}>Remove</button></div>
+              <div><button className='deletBtn' onClick={() => { deleteCart(item._id) }}><FontAwesomeIcon icon={faTrashAlt}/></button></div>
             </div>
           </div>
           <div className='countButtons'>
-            <div><button className='increase' onClick={() => { increase(item._id) }}> + </button></div>
+            <div><button className='increase' onClick={() => { increase(item._id) }}><FontAwesomeIcon icon={faAngleUp} /></button></div>
             <span> {item.count} </span>
-            <div><button className='increase' onClick={() => { decrease(item._id) }}> - </button></div>
+            <div><button className='decrease' onClick={() => { decrease(item._id) }}><FontAwesomeIcon icon={faAngleDown} /></button></div>
           </div>
         </div>
       );

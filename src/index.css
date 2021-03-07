@@ -236,12 +236,10 @@ html {
 
 .cartInfo .deletBtn{
   display: inline-block;
-  text-transform:lowercase;
   color: tomato;
   background-color: transparent;
-  font-size: 16px;
-  letter-spacing: 2px;
-  margin: 30px 0px 0px -6px;
+  font-size: 20px;
+  margin: 27px 0px 0px -6px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -250,7 +248,6 @@ html {
 
 .cartInfo .deletBtn:hover{
   color: #e72424;
-  text-shadow: 1px 1px 2px rgb(247, 116, 93);
 }
 
 .countButtons{
@@ -267,9 +264,9 @@ html {
 
 .countButtons .decrease{
   display: inline-block;
-  font-size: 50px;
-  font-weight: 700;
+  font-size: 25px;
   background-color: transparent;
+  margin-top: 1.2rem;
   color: tomato;
   border: none;
   outline: none;
@@ -279,9 +276,8 @@ html {
 
 .countButtons .increase{
   display: inline-block;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: .9rem;
+  font-size: 25px;
+  margin-bottom: 1.2rem;
   background-color: transparent;
   text-align: center;
   color: tomato;
@@ -294,7 +290,6 @@ html {
 .countButtons .decrease:hover,
 .countButtons .increase:hover{
   color: #e72424;
-  text-shadow: 1px 1px 2px rgb(247, 116, 93);
 }
 
 .cartEmpty {
@@ -396,6 +391,23 @@ font-family: serif;
   background-color: black;
   padding: 0 2.5rem;
   border-top: 1px solid white;
+}
+
+.legal .connect {
+ display: flex;
+ align-items: center;
+}
+
+.legal .connect p{
+ text-transform: uppercase;
+ font-size: 13px;
+ margin-right: 1rem;
+}
+
+.legal .connect .icon{
+  margin-right: 5px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .legal p{

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { DataContext } from "./DataContext";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 class Product extends Component {
   static contextType = DataContext;
@@ -14,7 +16,7 @@ class Product extends Component {
              <div className="itemName">{product.product}</div>
              <div className="itemPrice"><b>NGN</b>{product.price}</div>
              <button className="itemBtn" onClick={() => {addCart(product._id)}}>
-              Add to cart
+              Add to <FontAwesomeIcon icon={faCartPlus}/>
             </button>
           </div>
         </div>
