@@ -16,7 +16,7 @@ class Product extends Component {
              <div className="itemName">{product.product}</div>
              <div className="itemPrice"><b>NGN</b>{product.price}</div>
              <button className="itemBtn" onClick={() => {addCart(product._id)}}>
-              Add to <FontAwesomeIcon icon={faCartPlus}/>
+              Add to cart <FontAwesomeIcon icon={faCartPlus}/>
             </button>
           </div>
         </div>

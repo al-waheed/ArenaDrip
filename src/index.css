@@ -112,7 +112,7 @@ html {
   font-family: monospace;
   font-size: 17px;
   letter-spacing: 4px;
-  color: rgb(19, 18, 18);
+  color:tomato;
   border: 2px solid tomato;
   outline: none;
   cursor: pointer;
@@ -121,6 +121,7 @@ html {
 
 .btnBox .clearBtn:hover{
  background-color: tomato;
+ color: white;
 }
 
 .total{
@@ -132,18 +133,20 @@ html {
 }
 
 .total h3{
-  color: red;
-  font-weight: lighter;
-  font-size: 17px;
+  color: rgb(7, 153, 7);
+  font-weight: 100;
+  font-size: 16px;
 }
 
-.total i {
-  font-weight: bold;
+.total b {
+  font-size: 20px;
+  font-family: monospace;
+  color:  rgb(4, 129, 4);
 }
 
 .total h3 span{
   font-family: serif;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 20px;
   color: rgb(19, 18, 18);
 }
@@ -154,7 +157,7 @@ html {
   text-transform: uppercase;
   font-family: monospace;
   background-color: rgb(7, 153, 7);
-  color: rgb(19, 18, 18);
+  color: white;
   font-size: 17px;
   padding: 10px 18px;
   margin-top: 2rem;
@@ -193,7 +196,7 @@ html {
 
 .cartList{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin: 13px 0;
 }
@@ -201,7 +204,6 @@ html {
 .cartImg{
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
 
 .cartImg .pics {
@@ -234,7 +236,7 @@ html {
   font-weight: bold;
 }
 
-.cartInfo .deletBtn{
+.deletBtn{
   display: inline-block;
   color: tomato;
   background-color: transparent;
@@ -246,27 +248,26 @@ html {
   transition: all 0.2s;
 }
 
-.cartInfo .deletBtn:hover{
+.deletBtn:hover{
   color: #e72424;
 }
 
 .countButtons{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  margin-top: 27px ;
 }
 
 .countButtons span{
   font-weight: bold;
   font-size: 15px;
-  color: green;
+  color: black;
 }
 
 .countButtons .decrease{
   display: inline-block;
-  font-size: 25px;
-  background-color: transparent;
-  margin-top: 1.2rem;
+  font-size: 18px;
+  margin-right: 1.2rem;
   color: tomato;
   border: none;
   outline: none;
@@ -276,10 +277,8 @@ html {
 
 .countButtons .increase{
   display: inline-block;
-  font-size: 25px;
-  margin-bottom: 1.2rem;
-  background-color: transparent;
-  text-align: center;
+  font-size: 18px;
+  margin-left: 1.2rem;
   color: tomato;
   border: none;
   outline: none;
@@ -348,6 +347,7 @@ font-family: serif;
   color:  rgb(36, 35, 35);
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .subFooter2{
@@ -365,8 +365,8 @@ font-family: serif;
 }
 
 .subFooter2 .info p{
-  width: 35vw;
-  font-weight: 100;
+  width: 30vw;
+  letter-spacing: 1px;
 }
 
 .subFooter2 .address{

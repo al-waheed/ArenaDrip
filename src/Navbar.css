@@ -38,12 +38,12 @@
 .navbar li span {
   position: relative;
   right: 7px;
-  bottom: 11px;
-  font-size: 9px;
+  bottom: 15px;
+  font-size: 11px;
   font-weight: 800;
   color: white;
   background-color: tomato;
-  padding: 3px;
+  padding: 5px;
   border-radius: 50%;
 }
 
