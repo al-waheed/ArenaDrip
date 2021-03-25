@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { DataContext } from "./DataContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+
+import { DataContext } from "./DataContext";
 
 class Product extends Component {
   static contextType = DataContext;

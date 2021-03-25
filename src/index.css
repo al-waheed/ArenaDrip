@@ -129,7 +129,7 @@ html {
   align-items: center;
   justify-content: space-between;
   letter-spacing: 2px;
-  border-top: 2px solid rgb(156, 153, 153);
+  border-top: 2px solid tomato;
 }
 
 .total h3{
@@ -390,7 +390,7 @@ font-family: serif;
   justify-content: space-between;
   background-color: black;
   padding: 0 2.5rem;
-  border-top: 1px solid white;
+  border-top: 1px solid tomato;
 }
 
 .legal .connect {

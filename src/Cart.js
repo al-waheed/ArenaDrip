@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { DataContext } from "./DataContext";
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
 
-class Cart extends Component {
+import { DataContext } from "./DataContext";
+ class Cart extends Component {
 
   static contextType = DataContext;
 

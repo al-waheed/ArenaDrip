@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import StripeCheckout from "react-stripe-checkout";
-import { DataContext } from "./DataContext"
 import { ToastsContainer, ToastsStore, ToastsContainerPosition } from "react-toasts"
 
-class Checkout extends Component {
+import { DataContext } from "./DataContext"
 
-   constructor(prop){
+class Checkout extends Component {
+    constructor(prop){
 	   super(prop); 
         this.thanks = this.thanks.bind(this);    
    }
@@ -26,7 +26,7 @@ class Checkout extends Component {
 				<StripeCheckout 
 				 stripeKey="pk_test_51IG4hAB84gCmikSTmQdGGWuJEesi7JzVUhiYOFELqO3HEo5N10vkcaMoiBrkSJc4kWkz3rb3ouwPkt7hDseRLiVS00rBDNug8o"
 				 name="Payment of item"
-				 description="FRESH PRODUCT"
+				 description="DRIPS PRODUCT"
 				 amount= {total * 100}
 				 token={this.thanks}
 				 currency="NGN"

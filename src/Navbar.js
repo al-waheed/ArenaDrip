@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { DataContext } from "./DataContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
 import "./Navbar.css";
+import { DataContext } from "./DataContext";
 
 class Navbar extends Component {
   static contextType = DataContext;

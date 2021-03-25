@@ -1,4 +1,5 @@
 import React, { Component, createContext } from "react";
+
 import { storeProduct } from './Data';
 
 export const DataContext = createContext();
