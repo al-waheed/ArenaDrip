@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 
 import { DataContext } from "./DataContext";
- class Cart extends Component {
+class Cart extends Component {
 
   static contextType = DataContext;
 
@@ -38,7 +38,12 @@ import { DataContext } from "./DataContext";
       );
     })
     ) : (
-      <div className="cartEmpty"> Your cart is currently empty</div>
+      <div className='cartEmptyPics'>
+        <h4 className="cartEmpty">
+          Your cart is currently empty
+      </h4>
+        <img src="/bg pics/bg.png" alt='pic1' className='pics' />
+      </div>
     );
     return (
       <div className="cartContainer">

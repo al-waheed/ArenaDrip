@@ -16,15 +16,15 @@ export const storeProduct = [
 	{
 		_id: 13,
 		count: 1,
-		product: "Nike Air brown",
-		image: "./image/Nike Air brown.jpg",
+		product: "Louis vuitton Airforce",
+		image: "./image/Louis vuitton Airforce.jpg",
 		price: 16000,
 	},
 	{
 		_id: 14,
 		count: 1,
-		product: "Nike Airforce brown",
-		image: "./image/Nike Airforce brown.jpg",
+		product: "Dark Allstar",
+		image: "./image/Dark Allstar .jpg",
 		price: 13500,
 	},
 	{
@@ -37,15 +37,15 @@ export const storeProduct = [
 	{
 		_id: 16,
 		count: 1,
-		product: "Nike Airforce white",
-		image: "./image/Nike Airforce white.jpg",
+		product: "Timbaland",
+		image: "./image/Timbaland.jpg",
 		price: 11000,
 	},
 	{
 		_id: 17,
 		count: 1,
-		product: "Nike Airforce2 black",
-		image: "./image/Nike Airforce2 black.jpg",
+		product: "Converse Allstar",
+		image: "./image/converse allstar.jpg",
 		price: 7500,
 	},
 	{
@@ -58,8 +58,8 @@ export const storeProduct = [
 	{
 		_id: 19,
 		count: 1,
-		product: "Nike Airforce2 red",
-		image: "./image/Nike Airforce2 red.jpg",
+		product: "Nike Air brown",
+		image: "./image/Nike Air brown.jpg",
 		price: 5000,
 	},
 	{
