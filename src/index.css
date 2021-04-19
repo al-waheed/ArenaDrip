@@ -11,12 +11,12 @@ html {
   background-color: tomato;
 }
 
-.App{
+.App {
   background-color: white;
   width: 90%;
   margin: 2rem auto;
+  min-height: 100vh;
 }
-
 
 /* product styling */
 
@@ -51,7 +51,7 @@ html {
 }
 
 .itemList .itemPrice {
-  color:tomato;
+  color: tomato;
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
@@ -76,10 +76,9 @@ html {
 
 /* product styling end */
 
-
 /* cart styling */
 
-.cartContainer{
+.cartContainer {
   width: 60%;
   margin: auto;
   min-height: 60vh;
@@ -99,14 +98,14 @@ html {
   padding-bottom: 4rem;
 }
 
-.cartContainer .btnBox{
+.cartContainer .btnBox {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 5rem 0rem 4rem 0rem;
-} 
+}
 
-.cartContainer .btnBox .clearBtn{
+.cartContainer .btnBox .clearBtn {
   display: inline-block;
   text-transform: uppercase;
   background-color: transparent;
@@ -114,19 +113,19 @@ html {
   font-family: monospace;
   font-size: 17px;
   letter-spacing: 4px;
-  color:tomato;
+  color: tomato;
   border: 2px solid tomato;
   outline: none;
   cursor: pointer;
   transition: all 0.5s;
 }
 
-.btnBox .clearBtn:hover{
- background-color: tomato;
- color: white;
+.btnBox .clearBtn:hover {
+  background-color: tomato;
+  color: white;
 }
 
-.total{
+.total {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,7 +133,7 @@ html {
   border-top: 2px solid tomato;
 }
 
-.total h3{
+.total h3 {
   color: rgb(7, 153, 7);
   font-weight: 100;
   font-size: 16px;
@@ -143,10 +142,10 @@ html {
 .total b {
   font-size: 20px;
   font-family: monospace;
-  color:  rgb(4, 129, 4);
+  color: rgb(4, 129, 4);
 }
 
-.total h3 span{
+.total h3 span {
   font-family: serif;
   font-weight: 500;
   font-size: 20px;
@@ -196,14 +195,14 @@ html {
   background-color: rgb(3, 119, 3);
 }
 
-.cartList{
+.cartList {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   margin: 13px 0;
 }
 
-.cartImg{
+.cartImg {
   display: flex;
   align-items: center;
 }
@@ -233,12 +232,12 @@ html {
   letter-spacing: 2px;
 }
 
-.cartInfo .cartPrice span{
+.cartInfo .cartPrice span {
   font-size: 18px;
   font-weight: bold;
 }
 
-.deletBtn{
+.deletBtn {
   display: inline-block;
   color: tomato;
   background-color: transparent;
@@ -250,23 +249,23 @@ html {
   transition: all 0.2s;
 }
 
-.deletBtn:hover{
+.deletBtn:hover {
   color: #e72424;
 }
 
-.countButtons{
+.countButtons {
   display: flex;
   align-items: center;
-  margin-top: 27px ;
+  margin-top: 27px;
 }
 
-.countButtons span{
+.countButtons span {
   font-weight: bold;
   font-size: 15px;
   color: black;
 }
 
-.countButtons .decrease{
+.countButtons .decrease {
   display: inline-block;
   font-size: 18px;
   margin-right: 1.2rem;
@@ -277,7 +276,7 @@ html {
   transition: all 0.3s;
 }
 
-.countButtons .increase{
+.countButtons .increase {
   display: inline-block;
   font-size: 18px;
   margin-left: 1.2rem;
@@ -289,11 +288,11 @@ html {
 }
 
 .countButtons .decrease:hover,
-.countButtons .increase:hover{
+.countButtons .increase:hover {
   color: #e72424;
 }
 
-.cartEmptyPics .pics{
+.cartEmptyPics .pics {
   width: 100%;
   height: 50%;
   object-fit: cover;
@@ -323,13 +322,11 @@ html {
   animation: 20s slider infinite;
 }
 
-
 #slider figure img {
   width: 20%;
   height: 40vh;
   float: left;
 }
-
 
 @keyframes slider {
   0% {
@@ -355,100 +352,99 @@ html {
   }
   95% {
     left: -300%;
-  }  
+  }
   100% {
     left: -400%;
-  }  
+  }
 }
 
 /* carousel styling end*/
 
-
 /* footer styling */
 
-.footer{
- color: white;
- margin-top: 2rem;
+.footer {
+  color: white;
+  margin-top: 2rem;
 }
 
-.subFooter{
+.subFooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:  rgb(36, 35, 35);
+  background-color: rgb(36, 35, 35);
   padding: 0 2.5rem;
 }
 
-.subFooter .newsletter h3{
+.subFooter .newsletter h3 {
   font-size: 20px;
   font-family: sans-serif;
   margin-bottom: -7px;
 }
 
-.subFooter .newsletter p{
-font-size: 17px;
-font-family: serif;
+.subFooter .newsletter p {
+  font-size: 17px;
+  font-family: serif;
 }
 
-.subFooter .subscribe{
+.subFooter .subscribe {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.subFooter .subscribe .input{
- width: 30vw;
- height: 2.5rem;
- outline: none;
-}
- 
-.subFooter .subscribe .input::placeholder{
-  padding: 20px ;
+.subFooter .subscribe .input {
+  width: 30vw;
+  height: 2.5rem;
+  outline: none;
 }
 
-.subFooter button{
+.subFooter .subscribe .input::placeholder {
+  padding: 20px;
+}
+
+.subFooter button {
   padding: 15px 20px;
   background-color: tomato;
-  color:  rgb(36, 35, 35);
+  color: rgb(36, 35, 35);
   border: none;
   outline: none;
   cursor: pointer;
 }
 
-.subFooter2{
-  background-color:black;
+.subFooter2 {
+  background-color: black;
   display: flex;
   justify-content: space-between;
   padding: 2rem 2.5rem;
 }
 
-.subFooter2 .info{
-  font-family: 'Times New Roman';
+.subFooter2 .info {
+  font-family: "Times New Roman";
   font-size: 17px;
   text-align: left;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
 }
 
-.subFooter2 .info p{
+.subFooter2 .info p {
   width: 30vw;
   letter-spacing: 1px;
 }
 
-.subFooter2 .address{
+.subFooter2 .address {
   font-size: 14px;
   letter-spacing: 1px;
-  font-family: 'Times New Roman';
+  font-family: "Times New Roman";
   line-height: 5px;
 }
 
-.subFooter2 .about h3{
- font-size: 14px;
- letter-spacing: 1px;
- font-weight: 100;
- line-height: 9px;
- font-family: 'Times New Roman';
+.subFooter2 .about h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  line-height: 9px;
+  font-family: "Times New Roman";
 }
 
-.legal{
+.legal {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -458,54 +454,53 @@ font-family: serif;
 }
 
 .legal .connect {
- display: flex;
- align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.legal .connect p{
- text-transform: uppercase;
- font-size: 13px;
- margin-right: 1rem;
+.legal .connect p {
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-right: 1rem;
 }
 
-.legal .connect .icon{
+.legal .connect .icon {
   margin-right: 5px;
   font-size: 20px;
   cursor: pointer;
 }
 
-.legal p{
+.legal p {
   font-family: serif;
   font-size: 15px;
 }
 
-.legal p span{
+.legal p span {
   color: blue;
 }
 
 /* footer styling end */
 
-
 /* payment styling */
 
-.paymentBox .stripePayment{
+.paymentBox .stripePayment {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.paymentBox .stripePayment .heading{
+.paymentBox .stripePayment .heading {
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 
-.paymentBox .stripePayment .heading span{
+.paymentBox .stripePayment .heading span {
   color: rgba(0, 0, 255, 0.562);
   letter-spacing: -1px;
 }
 
-.paymentBox .img{
+.paymentBox .img {
   display: block;
   margin: auto;
   height: 60%;
@@ -513,9 +508,158 @@ font-family: serif;
   margin-bottom: -2.2rem;
 }
 
-.paymentBox .img .stripeBg{
+.paymentBox .img .stripeBg {
   width: 100%;
   height: 80%;
   object-fit: cover;
 }
-/* payment styling end */
+
+@media only screen and (max-width: 768px) {
+  .App {
+    width: 100%;
+    margin: 0;
+  }
+  #slider {
+    margin: 0;
+    margin-bottom: 2.2rem;
+  }
+
+  #slider figure img {
+    height: 30vh;
+  }
+
+  .itemList .itemPic {
+    width: 13rem;
+    height: 18rem;
+  }
+
+  .itemList .itemName {
+    letter-spacing: 0.5px;
+    font-size: 15px;
+  }
+
+  .itemList .itemPrice {
+    letter-spacing: 0.5px;
+    font-size: 13px;
+  }
+
+  .itemList .itemBtn {
+    font-size: 13px;
+  }
+
+  .subFooter {
+    flex-direction: column-reverse;
+    padding: 0.8rem 0;
+  }
+
+  .subFooter .subscribe .input {
+    width: 75vw;
+  }
+
+  .subFooter .newsletter{
+    display: flex;
+    align-items: center;
+  }
+
+  .subFooter .newsletter p {
+    margin-bottom: 0;
+    font-size: 17px;
+    margin-right: 0.5rem;
+  }
+
+  .subFooter .newsletter p {
+    font-size: 17px;
+  }
+
+  .subFooter2 {
+    flex-direction: column;
+    justify-content: none;
+    padding: 1rem 0.5rem;
+  }
+
+  .subFooter2 .address,
+  .subFooter2 .about h3,
+  .subFooter2 .info p {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .legal{
+    flex-direction: column;
+    padding: 0 0.5rem;
+  }
+
+  .legal p,
+  .legal .connect p{
+    font-size: 12px;
+  }
+  
+  .cartContainer {
+    width: 90%;
+  }
+
+  .cartContainer .cartHeading {
+    font-size: 17px;
+  }
+
+  .cartImg .pics {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 10%;
+    margin-right: 4rem;
+  }
+
+  .cartInfo .cartProduct {
+    font-size: 15px;
+  }
+
+  .cartInfo .cartPrice span {
+    font-size: 15px;
+  }
+  .cartEmpty,
+  .cartInfo .cartPrice {
+    font-size: 13px;
+  }
+
+  .deletBtn {
+    font-size: 15px;
+    margin: 0px 0px 0px -10px;
+  }
+
+  .cartImg {
+    align-items: none;
+  }
+
+  .countButtons span {
+    font-size: 12px;
+  }
+
+  .countButtons .increase,
+  .countButtons .decrease {
+    font-size: 14px;
+  }
+
+  .total{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .cartContainer .btnBox .clearBtn,
+  .total .paymentBtn {
+    font-size: 14px;
+  }
+   
+  .total b,
+  .total h3 {
+    font-size: 15px;
+  }
+
+  .total h3 span {
+    font-size: 16px;
+  }
+
+  .paymentBox .stripePayment .heading {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}

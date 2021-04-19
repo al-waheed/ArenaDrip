@@ -8,7 +8,7 @@ function Footer() {
     <div className="footer">
       <div className="subFooter">
         <div className="newsletter">
-          <h3>Newsletter</h3>
+          <p>Newsletter:</p>
           <p>Subscribe to get information about products</p>
         </div>
         <div className="subscribe">
