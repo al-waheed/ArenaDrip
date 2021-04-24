@@ -85,7 +85,7 @@
   }
 
   .headingTitle {
-    font-size: 27px;
+    font-size: 20px;
   }
 
   .heading h1 span {
@@ -94,12 +94,12 @@
   }
   .navbar .navLink2,
   .navbar .navLink {
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .navbar li span {
-    bottom: 13px;
+    bottom: 10px;
     padding: 3px;
-    font-size: 9px;
+    font-size: 7px;
   }
 }
