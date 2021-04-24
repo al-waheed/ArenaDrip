@@ -17,7 +17,7 @@
   color: tomato;
 }
 
-.heading h1 span{
+.heading h1 span {
   position: relative;
   bottom: 14px;
   right: 4px;
@@ -73,16 +73,22 @@
   transition: all 0.3s;
 }
 
-@media only screen and (max-width: 768px){
-  .menu{
-    padding: 0 0.3rem;
+@media only screen and (max-width: 600px) {
+  .menu {
+    height: 4rem;
+    padding: 0 0.8rem;
+    top: 0;
+    width: 95%;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
   }
 
-  .headingTitle{
+  .headingTitle {
     font-size: 27px;
   }
 
-  .heading h1 span{
+  .heading h1 span {
     bottom: 12px;
     font-size: 12px;
   }
@@ -94,6 +100,6 @@
   .navbar li span {
     bottom: 13px;
     padding: 3px;
-    font-size: 11px;
+    font-size: 9px;
   }
 }

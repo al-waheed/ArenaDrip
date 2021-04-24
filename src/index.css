@@ -326,6 +326,7 @@ html {
   width: 20%;
   height: 40vh;
   float: left;
+  border-radius: 5px;
 }
 
 @keyframes slider {
@@ -514,14 +515,15 @@ html {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .App {
     width: 100%;
     margin: 0;
   }
   #slider {
-    margin: 0;
+    margin: 0px;
     margin-bottom: 2.2rem;
+    padding-top: 5.3rem;
   }
 
   #slider figure img {
@@ -530,7 +532,7 @@ html {
 
   .itemList .itemPic {
     width: 13rem;
-    height: 18rem;
+    height: 15rem;
   }
 
   .itemList .itemName {
@@ -553,7 +555,7 @@ html {
   }
 
   .subFooter .subscribe .input {
-    width: 75vw;
+    width: 70vw;
   }
 
   .subFooter .newsletter{
@@ -563,25 +565,21 @@ html {
 
   .subFooter .newsletter p {
     margin-bottom: 0;
-    font-size: 17px;
+    font-size: 12px;
     margin-right: 0.5rem;
-  }
-
-  .subFooter .newsletter p {
-    font-size: 17px;
   }
 
   .subFooter2 {
     flex-direction: column;
     justify-content: none;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1rem;
   }
 
   .subFooter2 .address,
   .subFooter2 .about h3,
   .subFooter2 .info p {
     width: 100%;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .legal{
@@ -591,20 +589,22 @@ html {
 
   .legal p,
   .legal .connect p{
-    font-size: 12px;
+    font-size: 11px;
   }
   
   .cartContainer {
-    width: 90%;
+    width: 80%;
+    padding-top: 5.3rem;
   }
 
   .cartContainer .cartHeading {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .cartImg .pics {
     width: 6rem;
     height: 6rem;
+    border: 1px solid tomato;
     border-radius: 10%;
     margin-right: 4rem;
   }
@@ -618,7 +618,7 @@ html {
   }
   .cartEmpty,
   .cartInfo .cartPrice {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .deletBtn {
@@ -644,9 +644,14 @@ html {
     flex-direction: column-reverse;
   }
   
-  .cartContainer .btnBox .clearBtn,
+  .cartContainer .btnBox .clearBtn{
+    font-size: 12px;
+    margin-top: -3rem;
+  }
+
   .total .paymentBtn {
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: -0.7rem;
   }
    
   .total b,
@@ -658,8 +663,17 @@ html {
     font-size: 16px;
   }
 
+  .paymentBox .stripePayment{
+    padding-top: 5.3rem;
+  }
+
   .paymentBox .stripePayment .heading {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1px;
+  }
+
+  .paymentBox .img {
+    height: 100%;
+    width: 100%; 
   }
 }
