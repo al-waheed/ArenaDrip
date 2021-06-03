@@ -51,7 +51,7 @@ class Cart extends Component {
         <div className="carts">{cartList}</div>
         { cart.length > 0 && <div>
           <div className='total'>
-            <Link to="/checkout" className="paymentBtn"> <span>continue to Checkout </span> </Link>
+            <Link to="/checkout" className="paymentBtn"> <span>Checkout </span> </Link>
             <h3><span>Total: </span><b>N</b>{total}.00</h3>
           </div>
           <div className="btnBox">

@@ -12,7 +12,7 @@ class Checkout extends Component {
 
    thanks(token){
 	 console.log(token)
-	 return ToastsStore.success("Your payment was successful")
+	 return ToastsStore.success("Payment was successful")
    }
 
    static contextType = DataContext;

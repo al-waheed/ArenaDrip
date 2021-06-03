@@ -299,7 +299,7 @@ html {
 }
 
 .cartEmpty {
-  font-family: fantasy;
+  font-family: "fantasy";
   text-align: center;
   letter-spacing: 1px;
   color: #e72424;
@@ -451,7 +451,7 @@ html {
   justify-content: space-between;
   background-color: black;
   padding: 0 2.5rem;
-  border-top: 1px solid tomato;
+  border-top: 1px solid white;
 }
 
 .legal .connect {
@@ -668,8 +668,9 @@ html {
   }
 
   .paymentBox .stripePayment .heading {
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    font-family:'fantasy';
   }
 
   .paymentBox .img {
