@@ -15,6 +15,8 @@ class Navbar extends Component {
       <header>
         <div className="menu">
           <div className="heading">
+          
+          <img src="/bg pics/driplogo.png" alt="logo" className="logo"/>
             <h1>
               <Link className="headingTitle" to="/"> ArenaDrip </Link>
               <span>&copy;</span>
