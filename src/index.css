@@ -46,12 +46,12 @@ html {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgb(37, 36, 36);
+  color: tomato;
   margin-bottom: 10px;
 }
 
 .itemList .itemPrice {
-  color: tomato;
+  color: rgb(37, 36, 36);
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
@@ -70,9 +70,31 @@ html {
   cursor: pointer;
 }
 
+
 .itemList .itemBtn:hover {
   background-color: #777;
 }
+
+.itemList .viewCart {
+  display: inline-block;
+  width: 100%;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: tomato;
+  background-color: transparent;
+  border: 2px solid tomato;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.itemList .viewCart:hover {
+  background-color: tomato;
+  color: #ffffff;
+}
+
 
 /* product styling end */
 
@@ -324,7 +346,7 @@ html {
 
 #slider figure img {
   width: 20%;
-  height: 40vh;
+  height: 45vh;
   float: left;
   border-radius: 5px;
 }

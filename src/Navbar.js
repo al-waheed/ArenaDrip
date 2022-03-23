@@ -7,7 +7,12 @@ import "./Navbar.css";
 import { DataContext } from "./DataContext";
 
 class Navbar extends Component {
+  
   static contextType = DataContext;
+
+  componentDidMount() {
+    this.context.getTotalPrice()
+  }
 
   render() {
     const { cart } = this.context;

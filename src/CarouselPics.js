@@ -22,7 +22,6 @@ function CarouselPics() {
 					</div>
 				</figure>
 			</div>
-
 		</div>
 	)
 }

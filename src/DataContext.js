@@ -9,7 +9,9 @@ export class DataProvider extends Component {
     products: storeProduct,
     cart: [],
     total: 0,
+    buttonText: "Add to cart"
   };
+
 
   addCart = id => {
     const { products, cart } = this.state;
@@ -84,9 +86,12 @@ export class DataProvider extends Component {
 
   render() {
     const { products, cart, total } = this.state;
+    const cartIds = cart.map(cart => {
+      return cart._id
+    })
     const { addCart, increase, decrease, deleteCart, getTotalPrice, clearCart } = this;
     return (
-      <DataContext.Provider value={{ products, cart, total, clearCart, addCart, increase, decrease, deleteCart, getTotalPrice }}>
+      <DataContext.Provider value={{ products, cart, total, cartIds, clearCart, addCart, increase, decrease, deleteCart, getTotalPrice }}>
         {this.props.children}
       </DataContext.Provider>
     );

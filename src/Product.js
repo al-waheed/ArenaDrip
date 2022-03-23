@@ -1,25 +1,42 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 import { DataContext } from "./DataContext";
-import CarouselPics from "./CarouselPics"
+import CarouselPics from "./CarouselPics";
 
 class Product extends Component {
   static contextType = DataContext;
 
   render() {
-    const { products, addCart } = this.context;
+    const { products, addCart, cartIds } = this.context;
     const productList = products.map((product) => {
+      const viewCart = cartIds.includes(product._id);
+      console.log(viewCart);
       return (
         <div key={product._id} className="itemList">
           <div className="itemBox">
             <img src={product.image} alt="pics" className="itemPic" />
             <div className="itemName">{product.product}</div>
-            <div className="itemPrice"><b>NGN</b>{product.price}</div>
-            <button className="itemBtn" onClick={() => { addCart(product._id) }}>
-              Add to cart <FontAwesomeIcon icon={faCartPlus} />
-            </button>
+            <div className="itemPrice">
+              <b>NGN</b>
+              {product.price}
+            </div>
+            {viewCart ? (
+              <Link to="/cart" className="viewCart">
+                View cart <FontAwesomeIcon icon={faCartPlus} />
+              </Link>
+            ) : (
+              <button
+                className="itemBtn"
+                onClick={() => {
+                  addCart(product._id);
+                }}
+              >
+                Add to cart <FontAwesomeIcon icon={faCartPlus} />
+              </button>
+            )}
           </div>
         </div>
       );
