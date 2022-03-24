@@ -52,7 +52,7 @@ function Footer() {
           <FontAwesomeIcon icon={faInstagramSquare} className="icon" />
           <FontAwesomeIcon icon={faYoutubeSquare} className="icon" />
         </div>
-        <p> &copy; 2021 ArenaDrip Limited. All Rights Reserved.</p>
+        <p> &copy; 2022 ArenaDrip Limited. All Rights Reserved.</p>
       </div>
     </div>
   );

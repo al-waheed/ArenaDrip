@@ -45,7 +45,7 @@ class Cart extends Component {
         <h4 className="cartEmpty">
           Your cart is currently empty
         </h4>
-        <img src="/bg pics/bg.png" alt='pic1' className='pics' />
+        <img src="/bg pics/bg.svg" alt='pic1' className='pics' />
       </div>
     );
     return (

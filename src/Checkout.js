@@ -34,7 +34,7 @@ class Checkout extends Component {
                  <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.TOP_RIGHT}/>
 			  </div>
 			  <div className="img">
-			    <img src="/bg pics/stripe.png" alt="Pics" className='stripeBg'/>
+			    <img src="/bg pics/stripe.svg" alt="Pics" className='stripeBg'/>
 			  </div>
 			</div>
 		)

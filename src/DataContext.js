@@ -9,7 +9,6 @@ export class DataProvider extends Component {
     products: storeProduct,
     cart: [],
     total: 0,
-    buttonText: "Add to cart"
   };
 
 

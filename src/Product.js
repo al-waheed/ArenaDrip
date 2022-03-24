@@ -13,7 +13,6 @@ class Product extends Component {
     const { products, addCart, cartIds } = this.context;
     const productList = products.map((product) => {
       const viewCart = cartIds.includes(product._id);
-      console.log(viewCart);
       return (
         <div key={product._id} className="itemList">
           <div className="itemBox">

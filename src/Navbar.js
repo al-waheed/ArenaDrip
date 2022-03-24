@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 import "./Navbar.css";
 import { DataContext } from "./DataContext";
@@ -27,14 +27,26 @@ class Navbar extends Component {
               <span>&copy;</span>
             </h1>
           </div>
+          <div className="search">
+          <div className='subInput'>
+          <FontAwesomeIcon className="searchIcon" icon={faSearch}/>
+            <input type="text" placeholder="Search product & brands" className="input" />
+            
+          </div>
+          <div className='subBtn'>
+            <button>Search</button>
+          </div>
+          </div>
           <nav className="navbar">
             <ul>
               <li>
                 <Link className="navLink" to="/"> Product </Link>
               </li>
               <li>
-                <Link className="navLink2" to="/cart"><FontAwesomeIcon icon={faShoppingCart} /></Link>
-                {cart.length > 0 && <span>{cart.length}</span>}
+                <Link className="navLink2" to="/cart"><FontAwesomeIcon style={{fontSize:"18px"}} icon={faShoppingCart} />
+                {cart.length > 0 && <span>{cart.length}</span>}  
+                <h4 style={{marginLeft:"5px", marginTop:"25px", fontWeight:"500"}}>Cart</h4>
+                </Link>
               </li>
             </ul>
           </nav>
