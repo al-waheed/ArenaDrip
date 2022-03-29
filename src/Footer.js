@@ -44,7 +44,7 @@ function Footer() {
         </div>
       </div>
       <div className="legal">
-        <p> We Using <span>Stripe</span> For Safe Payment.</p>
+        <p> We Using <span>STRIPE</span> For Safe Payment.</p>
         <div className="connect">
           <p>Connect with us</p>
           <FontAwesomeIcon icon={faFacebookSquare} className="icon" />

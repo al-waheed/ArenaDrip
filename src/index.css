@@ -68,7 +68,6 @@ html {
   cursor: pointer;
 }
 
-
 .itemList .itemBtn:hover {
   background-color: #777;
 }
@@ -80,28 +79,28 @@ html {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
-  color: tomato;
-  background-color: transparent;
-  border: 2px solid tomato;
-  padding: 10px 0;
+  color: #ffffff;
+  background-color: tomato;
+  padding: 13px 0;
   text-align: center;
   cursor: pointer;
 }
 
 .itemList .viewCart:hover {
-  background-color: tomato;
-  color: #ffffff;
+  background-color: rgb(245, 72, 41);
 }
-
 
 /* product styling end */
 
 /* cart styling */
 
 .cartContainer {
-  width: 60%;
+  width: 70%;
   margin: auto;
   min-height: 60vh;
+  background-color: #ffffff;
+  padding: 0 40px;
+  border-radius: 3px;
 }
 
 .cartContainer .cartHeading {
@@ -135,14 +134,15 @@ html {
   letter-spacing: 4px;
   color: tomato;
   border: 2px solid tomato;
+  border-radius: 3px;
   outline: none;
   cursor: pointer;
-  transition: all 0.5s;
+  margin-bottom: 10px;
 }
 
 .btnBox .clearBtn:hover {
-  background-color: tomato;
-  color: white;
+  border: 2px solid red;
+  color: red;
 }
 
 .total {
@@ -220,6 +220,15 @@ html {
   align-items: flex-start;
   justify-content: space-between;
   margin: 13px 0;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(32, 32, 32, 0.3);
+  transition: all 0.5s;
+}
+
+.cartList:hover {
+  box-shadow: 0px 1px 8px rgba(32, 32, 32, 0.3);
 }
 
 .cartImg {
@@ -312,17 +321,42 @@ html {
   color: #e72424;
 }
 
+.cartEmptyPics {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: -40px;
+}
+
 .cartEmptyPics .pics {
-  width: 100%;
+  width: 50%;
   height: 50%;
   object-fit: cover;
+  margin-top: 10px;
 }
 
 .cartEmpty {
   font-family: "fantasy";
-  text-align: center;
   letter-spacing: 1px;
-  color: #e72424;
+  color: tomato;
+}
+
+.cartEmptyPics .shoppingBtn button {
+  padding: 15px 15px;
+  background-color: tomato;
+  color: #ffffff;
+  letter-spacing: 1px;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 1px 4px rgba(32, 32, 32, 0.3);
+}
+
+.cartEmptyPics .shoppingBtn button:hover {
+  box-shadow: 0 1px 8px rgba(32, 32, 32, 0.3);
 }
 /* cart styling end*/
 
@@ -497,7 +531,7 @@ html {
 }
 
 .legal p span {
-  color: blue;
+  color: rgba(0, 0, 255, 0.562);
 }
 
 /* footer styling end */
@@ -505,196 +539,59 @@ html {
 /* payment styling */
 
 .paymentBox .stripePayment {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  margin-top: -1.5rem;
+  margin-bottom: -8rem;
+}
+
+.marquee {
+  width: 500px;
+  height: 30px;
+  line-height:1px;
+  background-color: white;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 
 .paymentBox .stripePayment .heading {
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 
 .paymentBox .stripePayment .heading span {
   color: rgba(0, 0, 255, 0.562);
   letter-spacing: -1px;
+  padding-left: 10px;
 }
 
 .paymentBox .img {
-  display: block;
+  display: grid;
+  place-items: center;
   margin: auto;
-  height: 60%;
-  width: 60%;
-  margin-bottom: -2.2rem;
-}
-
-.paymentBox .img .stripeBg {
   width: 100%;
-  height: 80%;
-  object-fit: cover;
+  margin-bottom: -8rem;
 }
 
-@media only screen and (max-width: 600px) {
-  .App {
-    width: 100%;
-    margin: 0;
-  }
-  #slider {
-    margin: 0px;
-    margin-bottom: 2.2rem;
-    padding-top: 5.3rem;
-  }
-
-  #slider figure img {
-    height: 30vh;
-  }
-
-  .itemList .itemPic {
-    width: 13rem;
-    height: 15rem;
-  }
-
-  .itemList .itemName {
-    letter-spacing: 0.5px;
-    font-size: 15px;
-  }
-
-  .itemList .itemPrice {
-    letter-spacing: 0.5px;
-    font-size: 13px;
-  }
-
-  .itemList .itemBtn {
-    font-size: 13px;
-  }
-
-  .subFooter {
-    flex-direction: column-reverse;
-    padding: 0.8rem 0;
-  }
-
-  .subFooter .subscribe .input {
-    width: 70vw;
-  }
-
-  .subFooter .newsletter{
-    display: flex;
-    align-items: center;
-  }
-
-  .subFooter .newsletter p {
-    margin-bottom: 0;
-    font-size: 12px;
-    margin-right: 0.5rem;
-  }
-
-  .subFooter2 {
-    flex-direction: column;
-    justify-content: none;
-    padding: 1rem 1rem;
-  }
-
-  .subFooter2 .address,
-  .subFooter2 .about h3,
-  .subFooter2 .info p {
-    width: 100%;
-    font-size: 11px;
-  }
-
-  .legal{
-    flex-direction: column;
-    padding: 0 0.5rem;
-  }
-
-  .legal p,
-  .legal .connect p{
-    font-size: 11px;
-  }
-  
-  .cartContainer {
-    width: 80%;
-    padding-top: 5.3rem;
-  }
-
-  .cartContainer .cartHeading {
-    margin-top: 1rem;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-
-  .cartImg .pics {
-    width: 5rem;
-    height: 5rem;
-    border: 1px solid tomato;
-    border-radius: 10%;
-    margin-right: 2.5rem;
-  }
-
-  .cartInfo .cartProduct,
-  .cartInfo .cartPrice span {
-    font-size: 11px;
-  }
-
-  .deletBtn {
-    font-size: 10px;
-    margin: 0px 0px 0px -10px;
-  }
-
-  .cartImg {
-    align-items: none;
-  }
-
-  .countButtons span {
-    font-size: 8px;
-  }
-
-  .cartEmpty,
-  .cartInfo .cartPrice,
-  .countButtons .increase,
-  .countButtons .decrease {
-    letter-spacing: 0px;
-    font-size: 10px;
-  }
-
-  .total{
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  
-  .cartContainer .btnBox .clearBtn{
-    padding: 5px 10px;
-    font-size: 10px;
-    margin-top: -3rem;
-  }
-
-  .total .paymentBtn {
-    padding: 7px 14px;
-    font-size: 10px;
-    margin-top: -0.3rem;
-  }
-   
-  .total b,
-  .total h3 {
-    font-size: 10px;
-  }
-
-  .total h3 span {
-    font-size: 12px;
-  }
-
-  .paymentBox .stripePayment{
-    padding-top: 5.3rem;
-  }
-
-  .paymentBox .stripePayment .heading {
-    font-size: 12px;
-    letter-spacing: 0.3px;
-    font-family:'fantasy';
-  }
-
-  .paymentBox .img {
-    height: 100%;
-    width: 100%; 
-  }
+.stripeBg {
+  width: 60%;
+  height: 50%;
 }
+
+/* payment styling end */

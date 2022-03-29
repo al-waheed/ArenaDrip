@@ -81,6 +81,27 @@ export const storeProduct = [
 		count: 1,
 		product: "Vans Reloaded",
 		image: "./image/Vans Reloaded.jpg",
-		price: 4999,
+		price: 12000,
+	},
+	{
+		_id: 23,
+		count: 1,
+		product: "christian dior gown",
+		image: "./image/ladiesWear/christian dior gown.jpg",
+		price: 11500,
+	},
+	{
+		_id: 24,
+		count: 1,
+		product: "Gucci red gown",
+		image: "./image/ladiesWear/Gucci red gown.jpg",
+		price: 10999,
+	},
+	{
+		_id: 25,
+		count: 1,
+		product: "redblack-charlie gown",
+		image: "./image/ladiesWear/redcharlie-gown.jpg",
+		price: 15500,
 	},
 ]

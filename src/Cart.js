@@ -43,9 +43,10 @@ class Cart extends Component {
     ) : (
       <div className='cartEmptyPics'>
         <h4 className="cartEmpty">
-          Your cart is currently empty
+          Your cart is currently empty!
         </h4>
         <img src="/bg pics/bg.svg" alt='pic1' className='pics' />
+        <Link to="/" className="shoppingBtn"> <button>Start Shopping </button> </Link>
       </div>
     );
     return (

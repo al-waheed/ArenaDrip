@@ -22,6 +22,9 @@ class Checkout extends Component {
 		return (
 			<div className="paymentBox">
 			 <div className='stripePayment'>
+			   <div class="marquee">
+	               <p>Use <span style={{color:'green'}}> 4242 4242 4242 4242 </span> for Credit card number</p>
+               </div>
 				<h2 className='heading'>Make your payment with <span>stripe</span> </h2>
 				<StripeCheckout 
 				 stripeKey="pk_test_51IG4hAB84gCmikSTmQdGGWuJEesi7JzVUhiYOFELqO3HEo5N10vkcaMoiBrkSJc4kWkz3rb3ouwPkt7hDseRLiVS00rBDNug8o"
@@ -33,7 +36,7 @@ class Checkout extends Component {
 				 />
                  <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.TOP_RIGHT}/>
 			  </div>
-			  <div className="img">
+			  <div className="img" >
 			    <img src="/bg pics/stripe.svg" alt="Pics" className='stripeBg'/>
 			  </div>
 			</div>
