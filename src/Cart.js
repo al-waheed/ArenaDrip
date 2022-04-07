@@ -20,46 +20,50 @@ class Cart extends Component {
           <div className="cartImg">
             <div className="cartPics">
               <img src={item.image} alt="pics" className="pics" />
-            </div>
-            <div className="cartInfo">
               <div className="cartProduct">{item.product}</div>
-              <div className="cartPrice"><span>N</span>{item.price}</div>
+            </div>
+            <div className="cartPrice"><span>₦</span>{item.price}</div>
               <div className='countButtons'>
-                <div><button className='decrease' onClick={() => { decrease(item._id) }}>
+                <div><button className='button decrease' onClick={() => { decrease(item._id) }}>
                 <FontAwesomeIcon icon={faMinus} /></button></div>
                 <span> {item.count} </span>
-                <div><button className='increase' onClick={() => { increase(item._id) }}>
+                <div><button className='button increase' onClick={() => { increase(item._id) }}>
                 <FontAwesomeIcon icon={faPlus} /></button></div>
               </div>
-            </div>
-          </div>
           <div>
             <button className='deletBtn' onClick={() => { deleteCart(item._id) }}>
             <FontAwesomeIcon icon={faTrashAlt} /></button>
+          </div>
           </div>
         </div>
       );
     })
     ) : (
+      <div className="emptyPicsBox">
       <div className='cartEmptyPics'>
         <h4 className="cartEmpty">
           Your cart is currently empty!
         </h4>
         <img src="/bg pics/bg.svg" alt='pic1' className='pics' />
-        <Link to="/" className="shoppingBtn"> <button>Start Shopping </button> </Link>
+        <Link to="/" className="shoppingBtn"> <button>Start Shopping</button> </Link>
+      </div>
       </div>
     );
     return (
       <div className="cartContainer">
-        <h1 className='cartHeading'>Your cart</h1>
         <div className="carts">{cartList}</div>
-        {cart.length > 0 && <div>
-          <div className='total'>
-            <Link to="/checkout" className="paymentBtn"> <span>Checkout </span> </Link>
-            <h3><span>Total: </span><b>N</b>{total}.00</h3>
+        {cart.length > 0 && <div className="payment">
+          <div className='totalbox'>
+            <div className="summary">
+            <p>Order Summary</p>
+            <span>{cart.length} items</span>
+            </div>
+            <p className="subtotal"><span>Subtotal: </span><h3>₦{total}.00</h3></p> 
+            <p className="total"><span>Total: </span><h3>₦{total}</h3></p>
           </div>
+          <Link to="/checkout" className="checkout"> <span> Continue to Checkout </span> </Link>
           <div className="btnBox">
-            <button className="clearBtn" onClick={() => clearCart()}>clear cart</button>
+            <button className="clearBtn" onClick={() => clearCart()}>Clear Cart</button>
           </div>
         </div>}
       </div>

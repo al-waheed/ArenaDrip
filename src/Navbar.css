@@ -43,6 +43,7 @@
   flex-direction: row;
   align-items: center;
 }
+
 .search .input {
   width: 30vw;
   height: 2.5rem;
@@ -96,26 +97,18 @@
   list-style: none;
 }
 
-.navbar li span {
-  position: relative;
-  right: 9px;
-  bottom: 9px;
-  font-size: 7px;
-  font-weight: bolder;
-  color: white;
-  background-color: tomato;
-  padding: 5px;
-  border-radius: 50%;
-  margin-right: -14px;
-}
-
 .navbar .navLink {
-  display: inline-block;
   font-size: 15px;
   letter-spacing: 0.5px;
+  font-family: Helvetica;
   text-transform: capitalize;
   text-decoration: none;
   color: rgb(37, 36, 36);
+}
+
+.navbar .navLink2 h4{
+  color: rgb(37, 36, 36);
+  font-weight: 500;
 }
 
 .navbar .navLink2{
@@ -125,43 +118,11 @@
    font-size: 15px;
    color: rgb(37, 36, 36);
    letter-spacing: 0.5px;
-   margin-left: 1.5rem;
+   margin-left: 0.5rem;
    text-decoration: none;
 }
 
-
 .navbar .navLink:hover,
-.navbar .navLink2:hover {
+.navbar .navLink2 h4:hover {
   color: tomato;
 }
-
-/* @media only screen and (max-width: 600px) {
-  .menu {
-    height: 4rem;
-    padding: 0 0.8rem;
-    top: 0;
-    width: 95%;
-    position: fixed;
-    background-color: white;
-    z-index: 1;
-  }
-
-  .headingTitle {
-    font-size: 30px;
-  }
-
-  .heading h1 span {
-    bottom: 12px;
-    font-size: 12px;
-  }
-  .navbar .navLink2,
-  .navbar .navLink {
-    font-size: 16px;
-  }
-
-  .navbar li span {
-    bottom: 10px;
-    padding: 3px;
-    font-size: 7px;
-  }
-} */
