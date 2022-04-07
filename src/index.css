@@ -120,7 +120,8 @@ html {
   width: 300px;
   background-color: #ffffff;
   border-radius: 3px;
-  margin-top: 10px;
+  margin-top: 20px;
+  height: 240px;
   margin-bottom: 200px;
   padding: 10px;
   font-family: Helvetica;
@@ -276,11 +277,6 @@ html {
   color: tomato;
 }
 
-.emptyPicsBox{
- /* display: flex;
- align-items: center;
- justify-content: center; */
-}
 
 .cartEmptyPics {
   display: flex;
@@ -289,7 +285,7 @@ html {
   flex-direction: column;
   margin-bottom: -40px;
   background-color: #ffffff;
-  margin: 0 100px;
+  margin: 0 220px;
 }
 
 .cartEmptyPics .pics {

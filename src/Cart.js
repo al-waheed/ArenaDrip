@@ -39,7 +39,6 @@ class Cart extends Component {
       );
     })
     ) : (
-      <div className="emptyPicsBox">
       <div className='cartEmptyPics'>
         <h4 className="cartEmpty">
           Your cart is currently empty!
@@ -47,11 +46,13 @@ class Cart extends Component {
         <img src="/bg pics/bg.svg" alt='pic1' className='pics' />
         <Link to="/" className="shoppingBtn"> <button>Start Shopping</button> </Link>
       </div>
-      </div>
     );
     return (
       <div className="cartContainer">
         <div className="carts">{cartList}</div>
+        {/* {cart.length > 0 && <div className="shopping">
+        <Link to="/" className="shoppingBtn"> <button>Continue Shopping</button> </Link> 
+        </div>} */}
         {cart.length > 0 && <div className="payment">
           <div className='totalbox'>
             <div className="summary">
