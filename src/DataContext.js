@@ -1,6 +1,6 @@
 import React, { Component, createContext } from "react";
 
-import { storeProduct } from './Data';
+import { storeProduct } from "./Data";
 
 export const DataContext = createContext();
 
@@ -9,10 +9,14 @@ export class DataProvider extends Component {
     products: storeProduct,
     cart: [],
     total: 0,
+    currentPage: 1,
+    postPerPage: 15,
   };
 
+  paginate = pageNumber => {this.setState({ pageNumber });
+  };
 
-  addCart = id => {
+  addCart = (id) => {
     const { products, cart } = this.state;
     const data = products.filter((product) => {
       return product._id === id;
@@ -20,7 +24,7 @@ export class DataProvider extends Component {
     this.setState({ cart: [...cart, ...data] });
   };
 
-  increase = id => {
+  increase = (id) => {
     const { cart } = this.state;
     cart.forEach((item) => {
       if (item._id === id) {
@@ -31,18 +35,18 @@ export class DataProvider extends Component {
     this.getTotalPrice();
   };
 
-  decrease = id => {
+  decrease = (id) => {
     const { cart } = this.state;
     cart.forEach((item) => {
       if (item._id === id) {
-        item.count === 1 ? (this.deleteCart(id)) : (item.count -= 1);
+        item.count === 1 ? this.deleteCart(id) : (item.count -= 1);
       }
     });
     this.setState({ cart: cart });
     this.getTotalPrice();
   };
 
-  deleteCart = id => {
+  deleteCart = (id) => {
     const { cart } = this.state;
     cart.forEach((item, index) => {
       if (item._id === id) {
@@ -56,7 +60,7 @@ export class DataProvider extends Component {
   getTotalPrice = () => {
     const { cart } = this.state;
     const totalPrice = cart.reduce((prevItem, item) => {
-      return prevItem + (item.price * item.count);
+      return prevItem + item.price * item.count;
     }, 0);
     this.setState({ total: totalPrice });
   };
@@ -65,12 +69,12 @@ export class DataProvider extends Component {
     this.setState({ cart: [], total: 0 });
     localStorage.setItem("dataCart", JSON.stringify([]));
     localStorage.setItem("dataTotal", JSON.stringify(0));
-  }
+  };
 
   componentDidUpdate() {
     localStorage.setItem("dataCart", JSON.stringify(this.state.cart));
     localStorage.setItem("dataTotal", JSON.stringify(this.state.total));
-  };
+  }
 
   componentDidMount() {
     const dataCart = JSON.parse(localStorage.getItem("dataCart"));
@@ -81,16 +85,44 @@ export class DataProvider extends Component {
     if (dataTotal !== null) {
       this.setState({ total: dataTotal });
     }
-  };
+  }
 
   render() {
-    const { products, cart, total } = this.state;
-    const cartIds = cart.map(cart => {
-      return cart._id
-    })
-    const { addCart, increase, decrease, deleteCart, getTotalPrice, clearCart } = this;
+    const { products, cart, total, currentPage, postPerPage } = this.state;
+    const cartIds = cart.map((cart) => {
+      return cart._id;
+    });
+    const indexOfLastPost = currentPage * postPerPage;
+    const indexOfFirstPost = indexOfLastPost - postPerPage;
+    const currentPost  = products.slice(indexOfFirstPost, indexOfLastPost);
+
+    const {
+      addCart,
+      increase,
+      decrease,
+      deleteCart,
+      getTotalPrice,
+      clearCart,
+      paginate,
+    } = this;
     return (
-      <DataContext.Provider value={{ products, cart, total, cartIds, clearCart, addCart, increase, decrease, deleteCart, getTotalPrice }}>
+      <DataContext.Provider
+        value={{
+          products,
+          cart,
+          total,
+          cartIds,
+          currentPost,
+          postPerPage,
+          paginate,
+          clearCart,
+          addCart,
+          increase,
+          decrease,
+          deleteCart,
+          getTotalPrice,
+        }}
+      >
         {this.props.children}
       </DataContext.Provider>
     );

@@ -24,7 +24,7 @@ class Cart extends Component {
             </div>
             <div className="cartPrice"><span>₦</span>{item.price}</div>
               <div className='countButtons'>
-                <div><button className='button decrease' onClick={() => { decrease(item._id) }}>
+                <div><button className='button decrease' onClick={(id) => { decrease((item._id)) }}>
                 <FontAwesomeIcon icon={faMinus} /></button></div>
                 <span> {item.count} </span>
                 <div><button className='button increase' onClick={() => { increase(item._id) }}>
