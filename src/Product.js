@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Ratings from "./Rating";
-import Pagination from "./Pagination";
 
 import { DataContext } from "./DataContext";
 import CarouselPics from "./CarouselPics";
@@ -13,9 +12,9 @@ class Product extends Component {
 
 
   render() {
-    const { products, addCart, cartIds, currentPost, postPerPage, paginate } = this.context;
+    const { addCart, cartIds, products } = this.context;
 
-     const productList = currentPost.map((product) => {
+     const productList = products.map((product) => {
       const viewCart = cartIds.includes(product._id);
       return (
         <div key={product._id} className="itemList">
@@ -25,7 +24,7 @@ class Product extends Component {
             <div className="itemPrice">
               <b>₦</b>{product.price}
             </div>
-            <p> <Ratings/></p>
+            <p> <Ratings/> </p>
             {viewCart ? (
               <button className="viewCart"><Link to="/cart" style={{textDecoration:'none', color:'#fff'}}>
                View cart 
@@ -51,7 +50,6 @@ class Product extends Component {
         <div className="itemContainer">
           <div className="items">{productList}</div>
         </div>
-        {/* <Pagination postPerPage={postPerPage} totalPost={products.length} paginate={paginate}/> */}
       </div>
     );
   }

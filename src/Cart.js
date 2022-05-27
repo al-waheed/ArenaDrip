@@ -50,14 +50,11 @@ class Cart extends Component {
     return (
       <div className="cartContainer">
         <div className="carts">{cartList}</div>
-        {/* {cart.length > 0 && <div className="shopping">
-        <Link to="/" className="shoppingBtn"> <button>Continue Shopping</button> </Link> 
-        </div>} */}
         {cart.length > 0 && <div className="payment">
           <div className='totalbox'>
             <div className="summary">
             <p>Order Summary</p>
-            <span>{cart.length} items</span>
+            {cart.length > 1 ? <span>{cart.length} items</span>:<span>{cart.length} item</span>}
             </div>
             <p className="subtotal"><span>Subtotal: </span><h3>₦{total}.00</h3></p> 
             <p className="total"><span>Total: </span><h3>₦{total}</h3></p>

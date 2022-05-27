@@ -9,11 +9,6 @@ export class DataProvider extends Component {
     products: storeProduct,
     cart: [],
     total: 0,
-    currentPage: 1,
-    postPerPage: 15,
-  };
-
-  paginate = pageNumber => {this.setState({ pageNumber });
   };
 
   addCart = (id) => {
@@ -88,14 +83,11 @@ export class DataProvider extends Component {
   }
 
   render() {
-    const { products, cart, total, currentPage, postPerPage } = this.state;
+    const { products, cart, total } = this.state;
     const cartIds = cart.map((cart) => {
       return cart._id;
     });
-    const indexOfLastPost = currentPage * postPerPage;
-    const indexOfFirstPost = indexOfLastPost - postPerPage;
-    const currentPost  = products.slice(indexOfFirstPost, indexOfLastPost);
-
+   
     const {
       addCart,
       increase,
@@ -103,7 +95,6 @@ export class DataProvider extends Component {
       deleteCart,
       getTotalPrice,
       clearCart,
-      paginate,
     } = this;
     return (
       <DataContext.Provider
@@ -112,9 +103,6 @@ export class DataProvider extends Component {
           cart,
           total,
           cartIds,
-          currentPost,
-          postPerPage,
-          paginate,
           clearCart,
           addCart,
           increase,
