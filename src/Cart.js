@@ -54,7 +54,7 @@ class Cart extends Component {
           <div className='totalbox'>
             <div className="summary">
             <p>Order Summary</p>
-            {cart.length > 1 ? <span>{cart.length} items</span>:<span>{cart.length} item</span>}
+            {cart.length > 1 ? <span>{cart.length} item(s)</span>:<span>{cart.length} item</span>}
             </div>
             <p className="subtotal"><span>Subtotal: </span><h3>₦{total}.00</h3></p> 
             <p className="total"><span>Total: </span><h3>₦{total}</h3></p>
