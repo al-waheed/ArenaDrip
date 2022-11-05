@@ -22,7 +22,7 @@ class Product extends Component {
             <img src={product.image} alt="pics" className="itemPic" />
             <div className="itemName">{product.product}</div>
             <div className="itemPrice">
-              <b>₦</b>{product.price}
+              <b>₦</b>{product.price.toLocaleString()}
             </div>
             <p> <Ratings/> </p>
             {viewCart ? (

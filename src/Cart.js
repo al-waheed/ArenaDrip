@@ -14,6 +14,7 @@ class Cart extends Component {
 
   render() {
     const { cart, increase, decrease, deleteCart, total, clearCart } = this.context;
+    const totalToDecimal = total.toLocaleString()
     const cartList = cart.length ? (cart.map((item) => {
       return (
         <div key={item._id} className="cartList">
@@ -57,7 +58,7 @@ class Cart extends Component {
             {cart.length > 1 ? <span>{cart.length} item(s)</span>:<span>{cart.length} item</span>}
             </div>
             <p className="subtotal"><span>Subtotal: </span><h3>₦{total}.00</h3></p> 
-            <p className="total"><span>Total: </span><h3>₦{total}</h3></p>
+            <p className="total"><span>Total: </span><h3>₦{totalToDecimal}</h3></p>
           </div>
           <Link to="/checkout" className="checkout"> <span> Continue to Checkout </span> </Link>
           <div className="btnBox">
