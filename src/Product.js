@@ -24,7 +24,7 @@ class Product extends Component {
             <div className="itemPrice">
               <b>₦</b>{product.price.toLocaleString()}
             </div>
-            <p> <Ratings/> </p>
+            <p className="itemRating"> <Ratings/> </p>
             {viewCart ? (
               <button className="viewCart"><Link to="/cart" style={{textDecoration:'none', color:'#fff'}}>
                View cart 

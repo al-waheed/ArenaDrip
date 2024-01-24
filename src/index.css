@@ -109,11 +109,11 @@ html {
   padding: 0 40px;
 }
 
-.cartContainer .carts{
+.cartContainer .carts {
   margin: 20px 0;
 }
 
-.payment{
+.payment {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -127,7 +127,7 @@ html {
   font-family: Helvetica;
 }
 
-.totalbox .summary{
+.totalbox .summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -136,7 +136,7 @@ html {
   font-weight: 600;
 }
 
-.payment .subtotal{
+.payment .subtotal {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -146,11 +146,11 @@ html {
   letter-spacing: 0.5px;
 }
 
-.payment .subtotal h3{
+.payment .subtotal h3 {
   font-weight: 400;
 }
 
-.payment .total{
+.payment .total {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -161,8 +161,8 @@ html {
   margin-top: -10px;
 }
 
-.payment .checkout{
-  background-color: #4CAF50;
+.payment .checkout {
+  background-color: #4caf50;
   border: none;
   color: white;
   padding: 11px 32px;
@@ -175,7 +175,7 @@ html {
   cursor: pointer;
 }
 
-.payment .btnBox .clearBtn{
+.payment .btnBox .clearBtn {
   background-color: red;
   border: none;
   color: white;
@@ -190,7 +190,7 @@ html {
   cursor: pointer;
 }
 
-.cartList{
+.cartList {
   width: 800px;
   background-color: #ffffff;
   border-bottom: 1px solid rgb(241, 238, 238);
@@ -198,11 +198,11 @@ html {
   border-radius: 3px;
 }
 
-.cartPics{
+.cartPics {
   display: flex;
 }
 
-.cartImg{
+.cartImg {
   display: flex;
   justify-content: space-between;
 }
@@ -213,19 +213,19 @@ html {
   margin-right: 20px;
 }
 
-.cartImg .cartPics .cartProduct{
+.cartImg .cartPics .cartProduct {
   font-family: Helvetica;
   font-size: 15px;
   font-weight: 400;
 }
 
-.cartImg .cartPrice{
+.cartImg .cartPrice {
   font-family: Helvetica;
   font-size: 16px;
   font-weight: bold;
 }
 
-.cartImg .countButtons{
+.cartImg .countButtons {
   display: flex;
   align-items: center;
 }
@@ -239,27 +239,29 @@ html {
   background-color: #ffffff;
   border: 1px solid rgb(205, 205, 205);
   border-radius: 3px;
-  box-shadow: 0 4px 8px 0 rgba(29, 29, 29, 0.2), 0 3px 5px 0 rgba(34, 34, 34, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(29, 29, 29, 0.2),
+    0 3px 5px 0 rgba(34, 34, 34, 0.19);
   transition: all 1s;
 }
 
 .countButtons:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.button{
+.button {
   border: none;
   background-color: transparent;
   color: rgb(205, 205, 205);
   cursor: pointer;
 }
 
-.countButtons span{
+.countButtons span {
   padding: 0px 15px;
   color: rgb(32, 32, 32);
 }
 
-.cartImg .deletBtn{
+.cartImg .deletBtn {
   border: none;
   color: white;
   padding: 5px 13px;
@@ -272,11 +274,10 @@ html {
   transition: all 1s;
 }
 
-.cartImg .deletBtn:hover{
+.cartImg .deletBtn:hover {
   font-size: 18px;
   color: tomato;
 }
-
 
 .cartEmptyPics {
   display: flex;
@@ -508,7 +509,7 @@ html {
 .marquee {
   width: 500px;
   height: 30px;
-  line-height:1px;
+  line-height: 1px;
   background-color: white;
   color: black;
   white-space: nowrap;
@@ -555,3 +556,77 @@ html {
 }
 
 /* payment styling end */
+
+@media screen and (max-width: 960px) {
+  .web_container {
+    padding: 1rem 0;
+  }
+
+  .menu {
+    padding: 0 10px !important;
+  }
+
+  #slider {
+    margin: 0 5px 40px 5px;
+  }
+
+  #slider figure img {
+    height: 27vh;
+  }
+
+  .itemList {
+    margin-bottom: 10px;
+    border-radius: 2px;
+  }
+
+  .itemList .itemPic {
+    width: 10rem;
+    height: 9rem;
+    margin-bottom: 5px;
+  }
+
+  .itemList .itemName {
+    font-size: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 0.9px;
+  }
+
+  .itemList .itemPrice {
+    font-size: 10px;
+  }
+
+  .itemList .itemBtn {
+    width: 100%;
+  }
+
+  .itemList .itemBtn {
+    font-size: 10px;
+  }
+
+  .itemList .itemRating {
+    display: none;
+  }
+
+  .subFooter {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .subFooter .subscribe {
+    padding-bottom: 1rem;
+  }
+
+  .subFooter2 {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .subFooter2 .info {
+    display: none;
+  }
+
+  .legal{
+    /* padding: 0 1rem; */
+    display: block;
+  }
+}

@@ -1,31 +1,33 @@
+.web_container {
+  background-color: white;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+}
+
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
-  background-color: white;
-  padding: 0 2.5rem;
-  width: 95%;
-  top: 0;
-  position: fixed;
-  z-index: 1;
+  padding: 0 2rem;
 }
 
 .headingTitle {
   display: inline-block;
   font-size: 25px;
   font-family: Helvetica;
-  font-weight:500;
+  font-weight: 500;
   text-decoration: none;
   color: rgb(37, 36, 36);
 }
 
-.heading{
+.heading {
   display: flex;
   align-items: center;
 }
 
-.logo{
+.logo {
   width: 30px;
   height: 30px;
 }
@@ -48,12 +50,12 @@
   width: 30vw;
   height: 2.5rem;
   outline: none;
-  margin-right:10px;
+  margin-right: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-.search .subInput .searchIcon{
+.search .subInput .searchIcon {
   position: relative;
   right: -28px;
   color: rgb(134, 133, 133);
@@ -64,7 +66,7 @@
   font-size: 15px;
 }
 
-.search.search .input[type=text] {
+.search.search .input[type="text"] {
   padding-left: 35px;
   color: rgb(87, 84, 84);
   font-size: 15px;
@@ -83,7 +85,7 @@
   box-shadow: 3px 3px 8px rgb(187, 186, 186);
 }
 
-.search .subBtn button:hover{
+.search .subBtn button:hover {
   background-color: rgb(248, 80, 51);
 }
 
@@ -98,7 +100,7 @@
 }
 
 .navbar .navLink {
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   font-family: Helvetica;
   text-transform: capitalize;
@@ -106,23 +108,64 @@
   color: rgb(37, 36, 36);
 }
 
-.navbar .navLink2 h4{
+.navbar .navLink2 h4 {
   color: rgb(37, 36, 36);
   font-weight: 500;
 }
 
-.navbar .navLink2{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   font-size: 15px;
-   color: rgb(37, 36, 36);
-   letter-spacing: 0.5px;
-   margin-left: 0.5rem;
-   text-decoration: none;
+.navbar .navLink2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  color: rgb(37, 36, 36);
+  letter-spacing: 0.5px;
+  margin-left: 0.5rem;
+  text-decoration: none;
 }
 
 .navbar .navLink:hover,
 .navbar .navLink2 h4:hover {
   color: tomato;
+}
+
+/* Mobile Navbar */
+.mobile_nav {
+  margin-right: 2rem;
+}
+
+.fa-times .fa-bars {
+  font-size: 30px;
+}
+
+/* .mobile_container {
+  padding-right: 2.5rem;
+} */
+
+.navLink_mobile .navLink:hover {
+  color: rgb(248, 80, 51);
+}
+
+.navLink_mobile .navLink {
+  padding-left: 1rem;
+}
+
+.navbar_mobile li {
+  list-style: none;
+}
+
+.navbar_mobile .navLink {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: Helvetica;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: rgb(37, 36, 36);
+}
+
+@media screen and (max-width: 960px) {
+  .itemContainer .items{
+    margin: 0 5px;
+  }
 }
