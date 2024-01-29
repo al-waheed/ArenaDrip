@@ -499,11 +499,10 @@ html {
 
 /* payment styling */
 
-.paymentBox .stripePayment {
-  display: grid;
-  place-items: center;
-  margin-top: -1.5rem;
-  margin-bottom: -8rem;
+.payment_container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
 }
 
 .marquee {
@@ -551,8 +550,8 @@ html {
 }
 
 .stripeBg {
-  width: 60%;
-  height: 50%;
+  margin: 50px 0;
+  width: 300px;
 }
 
 /* payment styling end */
@@ -625,8 +624,71 @@ html {
     display: none;
   }
 
-  .legal{
-    /* padding: 0 1rem; */
+  .legal {
     display: block;
+  }
+
+  .cartEmptyPics {
+    margin: 0;
+  }
+
+  .cartContainer {
+    display: block;
+  }
+
+  .cartImg {
+    display: block;
+  }
+
+  .cartList {
+    width: 150px;
+    padding: 10px;
+  }
+
+  .cartContainer .carts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .cartPics {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .countButtons {
+    box-shadow: none;
+    width: 5.5rem;
+    margin-bottom: 10px;
+  }
+
+  .cartContainer {
+    padding: 0 10px;
+  }
+
+  .cartImg .cartPics .cartProduct {
+    font-size: 12px;
+  }
+
+  .cartImg .cartPrice {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .payment {
+    width: auto;
+  }
+
+  .paymentBox .stripePayment .heading {
+    font-size: 15px;
+  }
+
+  .marquee{
+    width: 350px;
+  }
+
+  .StripeCheckout{
+   text-align: center;
   }
 }

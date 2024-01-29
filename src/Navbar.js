@@ -27,7 +27,9 @@ class Navbar extends Component {
   };
 
   handleOpenIcon = () => {
-    this.setState({ open: !this.state.open });
+    if (window.innerWidth <= 960) {
+      this.setState({ open: !this.state.open });
+    }
   };
 
   handelShowNavbar = () => {
@@ -127,7 +129,7 @@ class Navbar extends Component {
                     <span>&copy;</span>
                   </h1>
                 </div>
-                <div style={{display:'flex', alignItems:'center'}} >
+                <div style={{ display: "flex", alignItems: "center" }}>
                   <Link className="mobile_nav" to="/cart">
                     <IconButton aria-label="cart">
                       <StyledBadge
@@ -151,17 +153,26 @@ class Navbar extends Component {
                       </h4>
                     </IconButton>
                   </Link>
-
-                  {open ? (
-                    <FontAwesomeIcon icon={faTimes} className="fa-times" style={{fontSize:'25px'}} />
-                  ) : (
-                    <FontAwesomeIcon icon={faBars} className="fa-bars" style={{fontSize:'25px'}} />
-                  )}
+                  <div>
+                    {open ? (
+                      <FontAwesomeIcon
+                        icon={faTimes}
+                        className="fa-times"
+                        style={{ fontSize: "25px" }}
+                      />
+                    ) : (
+                      <FontAwesomeIcon
+                        icon={faBars}
+                        className="fa-bars"
+                        style={{ fontSize: "25px" }}
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
               {open ? (
                 <nav className="navbar_mobile">
-                  <ul style={{paddingLeft:'0'}}>
+                  <ul style={{ paddingLeft: "0" }}>
                     <li className="navLink_mobile">
                       <Link className="navLink" to="/">
                         Product
